@@ -1,0 +1,23 @@
+Modélisation pour la chimie — XLG2CE814
+Version de préparation : 16 octobre 2026
+Supports pédagogiques : Lénaïc Lartigue, Nantes Université.
+Les énoncés PDF originaux sont conservés. La transcription HTML élimine les en-têtes répétés et zones de notes. Les précisions techniques sont signalées séparément.
+Les sujets annuels des projets et les fiches tierces fournies en préparation ne sont pas publiés.
+
+Basthon Notebook : version 0.81.0, commit 8f0e1443b1361e13da485e40252193f5724f75ae, 15 octobre 2026.
+Interface et composants téléchargés depuis https://notebook.basthon.fr/ ; origine et manifeste dans basthon/vendor-manifest.json.
+Basthon : Romain Casati et contributeurs.
+Sources de Basthon Notebook : https://forge.apps.education.fr/basthon/basthon-notebook/
+Sources du noyau : https://forge.apps.education.fr/basthon/basthon-kernel/
+Source précise Notebook : https://forge.apps.education.fr/basthon/basthon-notebook/-/tree/8f0e1443b1361e13da485e40252193f5724f75ae
+Les distributions tierces conservent leurs licences et mentions internes. Les bundles Basthon sont inchangés ; bridge.js adapte seulement leur présentation.
+
+Pyodide 0.26.4 ; CPython 3.12.1.
+NumPy 1.26.4 ; pandas 2.2.0 ; Matplotlib 3.5.2 ; SciPy 1.12.0.
+SciPy (archive de 47 Mo) est chargé à la demande depuis l’adresse fixe :
+https://pyodide.basthon.fr/0.26.4/full/pyodide/scipy-1.12.0-cp312-cp312-pyodide_2024_0_wasm32.whl
+Son empreinte SHA256 est conservée dans le manifeste Pyodide.
+Les modules supplémentaires hors sélection peuvent nécessiter un téléchargement réseau ; ils ne font pas partie du périmètre vérifié.
+
+Stockage : les notebooks et fichiers importés sont enregistrés localement dans IndexedDB, séparément par séquence/TP/projet. Le téléchargement d’un notebook n’inclut pas ses CSV. La fiche du groupe et le sujet importé sont également locaux. Le notebook se transmet séparément à l’enseignant selon les consignes de Madoc.
+Basthon peut utiliser ses services techniques de repli pour certaines interactions synchrones du noyau, selon les capacités du navigateur. Voir sa documentation officielle.
