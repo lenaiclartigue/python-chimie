@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunk_basthon_basthon_notebook=self.webpackChunk_basthon_basthon_notebook||[]).push([[5251],{37632:(e,o,s)=>{s.d(o,{createWardleyServices:()=>a.J});var a=s(9427);s(4954)}}]);

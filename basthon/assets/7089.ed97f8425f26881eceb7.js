@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunk_basthon_basthon_notebook=self.webpackChunk_basthon_basthon_notebook||[]).push([[7089],{37089:(e,t,o)=>{o.d(t,{createArchitectureServices:()=>s.S});var s=o(45796);o(4954)}}]);

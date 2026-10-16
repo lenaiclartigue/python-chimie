@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunk_basthon_basthon_notebook=self.webpackChunk_basthon_basthon_notebook||[]).push([[2355],{52355:(e,o,n)=>{n.d(o,{createEventModelingServices:()=>s.g});var s=n(82688);n(4954)}}]);

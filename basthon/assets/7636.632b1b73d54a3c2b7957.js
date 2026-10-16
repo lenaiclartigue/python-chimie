@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunk_basthon_basthon_notebook=self.webpackChunk_basthon_basthon_notebook||[]).push([[7636],{57636:(e,n,o)=>{o.d(n,{createCynefinServices:()=>s.t});var s=o(93279);o(4954)}}]);

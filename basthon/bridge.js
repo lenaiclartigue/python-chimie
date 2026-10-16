@@ -1,0 +1,2 @@
+// Local presentation layer; Basthon runtime is unmodified.
+const style=document.createElement('style');style.textContent=`body{background:#fff!important}.container{width:100%!important}#notebook-container{box-shadow:none!important;padding:12px!important}#header-container{padding:0 12px}#ipython_notebook img{max-height:28px}#notebook{padding-top:12px} .cell{padding:8px 3px!important} .CodeMirror{font-size:14px} `;document.head.append(style);

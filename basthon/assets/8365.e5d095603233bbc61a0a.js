@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunk_basthon_basthon_notebook=self.webpackChunk_basthon_basthon_notebook||[]).push([[8365],{98365:(e,a,o)=>{o.d(a,{createRadarServices:()=>s.f});var s=o(25552);o(4954)}}]);

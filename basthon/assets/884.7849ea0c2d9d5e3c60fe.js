@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunk_basthon_basthon_notebook=self.webpackChunk_basthon_basthon_notebook||[]).push([[884],{90884:(e,o,s)=>{s.d(o,{createTreemapServices:()=>a.d});var a=s(16527);s(4954)}}]);
