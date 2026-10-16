@@ -1,0 +1,31 @@
+PYTHON POUR LA CHIMIE — RELECTURE ET NOTATIONS SCIENTIFIQUES
+
+INSTALLATION
+Copier le contenu de cette archive dans le dépôt existant en remplaçant les fichiers correspondants. Conserver Basthon et les autres fichiers non présents dans cette archive. Commit puis Push origin.
+Cette archive regroupe l’interface actuelle, le cours révisé, ses captures sources et les trois TP par exercices.
+
+TRAVAIL DÉJÀ SAUVEGARDÉ
+Les notebooks locaux ne sont pas écrasés automatiquement. Pour charger les cellules corrigées d’une séquence déjà visitée : télécharger d’abord ses essais si nécessaire, puis cliquer sur « Restaurer les cellules du cours ». Les TP et projets conservent leurs espaces.
+
+COURS
+Les exemples originaux et leur manière de programmer sont conservés. Corrections ciblées : affectation de a avant les listes ; commentaires des tranches ; unités J.s et m3/mol ; explication de while ; arange ; paramètres et titre de l’histogramme ; explication des attributs de linregress. Les captures restent les versions originales du PowerPoint, identifiées comme telles.
+Ajouts identifiés : ordre d’exécution d’un notebook, lecture des erreurs, dérivée numérique et lecture/sélection de données CSV. Les fragments du complément comportent des cellules de préparation séparées pour pouvoir fonctionner dans un espace neuf. La distinction entre dispersion et incertitude de la moyenne est précisée dans le complément statistique.
+
+TP
+Indices et exposants HTML pour les espèces chimiques, les constantes, concentrations et volumes, les puissances de dix, unités et carrés. Aucun indice/exposant HTML n’est inséré dans les blocs Python.
+Corrections ciblées : HCCOH devient HCOOH ; suppression du signe + superflu dans la réaction du TP2 ; f-strings et indentation des gabarits ; lw et s pour les tracés ; abscisses précisées pour gradient ; lignes de la grille subplot ; axes du spectre d’absorption ; suppression d’une consigne répétée ; explication de linregress ; valeurs absolues des écarts pour chercher un seuil.
+
+POINTS SCIENTIFIQUES À DISCUTER AVANT UNE REFONTE PLUS PROFONDE
+Le TP1 nomme « diagramme de prédominance » une représentation des pourcentages : « diagramme de distribution » serait plus précis.
+Le TP2 descend à 10^-8 mol/L : à ces concentrations, les approximations négligeant l’autoprotolyse de l’eau doivent être discutées. Le modèle demandé n’a pas été remplacé.
+Le TP3 demande des couleurs spectrales à partir de turbo : cette palette fournit une représentation qualitative, pas une correspondance physique exacte longueur d’onde/couleur. Le choix n’a pas été modifié.
+L’exemple du photon garde les valeurs numériques arrondies/recopiées du support. Une harmonisation avec les valeurs SI exactes peut être envisagée séparément.
+
+VÉRIFICATIONS
+59 cellules exécutées sans erreur en Python local, syntaxe JavaScript vérifiée, présence des indices/exposants contrôlée sans modification typographique des blocs de code. Aucun test visuel ou d’exécution Basthon en navigateur dans cette session.
+
+RÉFÉRENCES TECHNIQUES
+https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.linregress.html
+https://numpy.org/doc/stable/reference/generated/numpy.gradient.html
+https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.subplot.html
+https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.scatter.html
