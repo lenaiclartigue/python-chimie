@@ -1,47 +1,11 @@
 {
   "lessons": [
     {
-      "id": "ppt-02",
-      "title": "Le langage Python",
-      "tp": 1,
-      "goal": "Chapitre I · Diapositive 2",
-      "body": "<p>https://www.python.org/</p><p>Langage de programmation </p><p>Créer en 1989 par Guido van Rossum (Pays-Bas)<br>→ Première version accessible en 1991<br>Langage de programmation interprété<br>→ Instructions écrites « traduites » par Python en instructions exécutables par l’ordinateur <br>Langage multiplateforme <br>→ Windows, Mac OS X, Linux, Android, iOS<br>Grande communauté d’utilisateur/développeurs <br>→ création continu de nouveau packages et bibliothèques spécifiques<br>Très adapté pour l’analyse de données<br>→ notamment pour manipuler, traiter et visualiser des résultats expérimentaux</p><p>Langage de programmation : Python (version 3)</p>",
-      "code": "",
-      "codeCells": [],
-      "source": "Cours_XLG2CE814_25_26_ChapI.pptx",
-      "sourceSlide": 2,
-      "tryit": ""
-    },
-    {
-      "id": "ppt-03",
-      "title": "Interface graphique : Anaconda",
-      "tp": 1,
-      "goal": "Chapitre I · Diapositive 3",
-      "body": "<p>Interface Graphique (GUI)</p><p>https://www.anaconda.com/download</p><p>GUI : Anaconda Navigator (version 3)</p><aside><strong>Note pour l’utilisation interactive — ajout au support</strong><p>Dans ce site, Basthon est déjà intégré : aucune installation d’Anaconda n’est nécessaire.</p></aside>",
-      "code": "",
-      "codeCells": [],
-      "source": "Cours_XLG2CE814_25_26_ChapI.pptx",
-      "sourceSlide": 3,
-      "tryit": ""
-    },
-    {
-      "id": "ppt-04",
-      "title": "Le notebook Jupyter",
-      "tp": 1,
-      "goal": "Chapitre I · Diapositive 4",
-      "body": "<p>https://jupyter.org/</p><p>Application web : Jupyter Notebook (version 7)</p><p>Environnement de programmation interactif sur le web<br>→ Cahier Electronique <br>Permet d’avoir dans un même document des entrées de différentes natures (texte, image, formules mathématiques, code informatique exécutable)<br></p><p>Création d’un premier document Python</p><p>Arborescence du dossier. Ici création d’un dossier spécifique « Jupyter Notebook » dans Documents</p><p>Création du fichier de type Python 3 nommé « XLG2CE814 »</p><aside><strong>Note pour l’utilisation interactive — ajout au support</strong><p>Le notebook est disponible à droite. Le dossier local présenté dans le PowerPoint correspond à son utilisation avec Jupyter sur ordinateur.</p></aside>",
-      "code": "",
-      "codeCells": [],
-      "source": "Cours_XLG2CE814_25_26_ChapI.pptx",
-      "sourceSlide": 4,
-      "tryit": ""
-    },
-    {
       "id": "comprendre-notebook",
       "title": "Exécuter un notebook dans l’ordre",
       "tp": 1,
-      "goal": "Complément pédagogique · Préparer les TP",
-      "body": "<p>Une cellule de code utilise les variables qui existent dans la mémoire du noyau Python. Leur valeur dépend de l’ordre d’exécution, pas seulement de leur position dans la page.</p><p>Exécutez les deux cellules dans l’ordre. Modifiez ensuite la valeur de <code>a</code> dans la première : la seconde ne voit ce changement qu’après réexécution de la première.</p><p>Pour vérifier que votre travail est reproductible, téléchargez-le, redémarrez Python puis exécutez toutes les cellules du haut vers le bas. Un résultat affiché peut provenir d’une ancienne exécution.</p>",
+      "goal": "Exécuter les cellules dans l’ordre et comprendre la mémoire de Python.",
+      "body": "<p>Le noyau Python conserve les variables créées lors des exécutions. Modifier le texte d’une cellule ne modifie pas la variable en mémoire : il faut exécuter à nouveau cette cellule.</p><p>Les deux cellules utilisent volontairement un calcul simple pour observer l’ordre d’exécution, indépendamment de la difficulté du calcul.</p>",
       "codeCells": [
         "a=3",
         "print(a*2)"
@@ -49,32 +13,43 @@
       "code": "a=3\n\nprint(a*2)",
       "tryit": "",
       "cellLabels": [
-        "Exemple complémentaire",
-        "Exemple complémentaire"
-      ]
+        "Définir la variable en mémoire",
+        "Utiliser la valeur actuellement en mémoire"
+      ],
+      "practice": {
+        "task": "Exécutez les cellules 1 puis 2. Remplacez ensuite a=3 par a=5 sans exécuter la cellule 1, puis réexécutez la cellule 2. Enfin, exécutez les cellules 1 puis 2.",
+        "expected": "Le résultat reste 6 tant que la nouvelle affectation n’a pas été exécutée. Il devient ensuite 10. Un redémarrage efface les variables : réexécutez les cellules dans l’ordre."
+      }
     },
     {
       "id": "ppt-05",
       "title": "Python comme calculatrice",
       "tp": 1,
-      "goal": "Chapitre I · Diapositive 5",
-      "body": "<p>Commande pour faire appliquer le code</p><p>Utilisation du programmateur comme calculatrice</p><p>Utiliser « ** » pour indiquer une puissance</p><details><summary>Voir les captures originales du cours</summary><figure><img src=\"assets/cours-source/s5-1.png\" alt=\"Exemple original de la diapositive 5\" style=\"max-width:100%;height:auto\"></figure></details>",
+      "goal": "Effectuer des opérations et calculer une puissance.",
+      "body": "<p>Une cellule peut calculer une expression. Python affiche le résultat de la dernière expression de la cellule. Les opérateurs <code>+</code> et <code>*</code> réalisent l’addition et la multiplication ; <code>**</code> indique une puissance.</p>",
       "code": "9+2\n\n9*2\n\n9**2",
       "codeCells": [
         "9+2",
         "9*2",
         "9**2"
       ],
-      "source": "Cours_XLG2CE814_25_26_ChapI.pptx",
-      "sourceSlide": 5,
-      "tryit": ""
+      "tryit": "",
+      "practice": {
+        "task": "Exécutez les trois cellules, puis comparez 9*2 et 9**2.",
+        "expected": "Les résultats sont respectivement 11, 18 et 81."
+      },
+      "cellLabels": [
+        "Addition",
+        "Multiplication",
+        "Puissance"
+      ]
     },
     {
       "id": "ppt-06",
       "title": "Les types de données",
       "tp": 1,
-      "goal": "Chapitre I · Diapositive 6",
-      "body": "<p>Type de données et instruction « Type »</p><p>Entier (int)<br><br>Décimaux (float)<br><br>Chaîne de caractère (str)<br><br>Booléens (bool)<br><br></p><p>L’instruction « type » permet de faire afficher par Python le type de données utilisé.</p><p>Une chaîne de caractère se programme par l’utilisation de guillemets simple ‘ ’ ou double &quot; &quot;</p><details><summary>Voir les captures originales du cours</summary><figure><img src=\"assets/cours-source/s6-1.png\" alt=\"Exemple original de la diapositive 6\" style=\"max-width:100%;height:auto\"></figure><figure><img src=\"assets/cours-source/s6-2.png\" alt=\"Exemple original de la diapositive 6\" style=\"max-width:100%;height:auto\"></figure><figure><img src=\"assets/cours-source/s6-0.png\" alt=\"Exemple original de la diapositive 6\" style=\"max-width:100%;height:auto\"></figure><figure><img src=\"assets/cours-source/s6-3.png\" alt=\"Exemple original de la diapositive 6\" style=\"max-width:100%;height:auto\"></figure></details>",
+      "goal": "Identifier les nombres, les chaînes de caractères et les booléens.",
+      "body": "<p>La fonction <code>type</code> indique le type d’une valeur : <code>int</code> pour un entier, <code>float</code> pour un nombre à virgule flottante, <code>str</code> pour une chaîne de caractères, <code>bool</code> pour un booléen.</p><p>Les guillemets délimitent une chaîne de caractères. Ils changent donc le sens d’une valeur comme <code>2</code>.</p>",
       "code": "type(2)\n\ntype(2.5)\n\ntype('Bonjour tous le monde')\n\ntype(True)",
       "codeCells": [
         "type(2)",
@@ -82,312 +57,441 @@
         "type('Bonjour tous le monde')",
         "type(True)"
       ],
-      "source": "Cours_XLG2CE814_25_26_ChapI.pptx",
-      "sourceSlide": 6,
-      "tryit": ""
+      "tryit": "",
+      "practice": {
+        "task": "Exécutez les quatre cellules. Remplacez ensuite type(2) par type(\"2\").",
+        "expected": "Sans guillemets, 2 est un entier ; avec guillemets, \"2\" est une chaîne de caractères."
+      },
+      "cellLabels": [
+        "Entier",
+        "Nombre à virgule flottante",
+        "Chaîne de caractères",
+        "Booléen"
+      ]
     },
     {
       "id": "ppt-07",
       "title": "Print, commentaires et variables",
       "tp": 1,
-      "goal": "Chapitre I · Diapositive 7",
-      "body": "<p>L’ajout d’un « #» dans un script permet d’ajouter un commentaire. Python ignore la partie de la ligne située après ce caractère. </p><p>La commande « print » demande à Python d’afficher  un résultat.</p><p>L’instruction « print »</p><p>L’utilisation de variable</p><p>Un variable est un espace de stockage pour un élément. Elles servent à stocker l’information qui sera réutilisée par la suite</p><details><summary>Voir les captures originales (avant relecture)</summary><figure><img src=\"assets/cours-source/s7-0.png\" alt=\"Exemple original de la diapositive 7\" style=\"max-width:100%;height:auto\"></figure><figure><img src=\"assets/cours-source/s7-1.png\" alt=\"Exemple original de la diapositive 7\" style=\"max-width:100%;height:auto\"></figure></details>",
+      "goal": "Stocker une valeur, commenter un calcul et afficher son résultat.",
+      "body": "<p><code>print</code> affiche une valeur ou un texte. Le signe <code>=</code> affecte une valeur à un nom de variable. Le caractère <code>#</code> introduit un commentaire : Python ignore ce qui le suit sur la ligne.</p><p>Le second exemple calcule l’énergie d’un photon avec E = hc/λ. Le nom <code>l</code> représente ici la longueur d’onde en mètres. Les unités doivent rester cohérentes pour obtenir une énergie en joules.</p>",
       "code": "# Premier programme Python\nprint(\"Bonjour tout le monde\")\n\n# Calcul de l'énergie d'un photon\nh = 6.626070e-34 # la constante de Planck en J.s\nc = 299792456.2 # vitesse de la lumière en m/s\nl = 600e-9 # exprimé en m soit une longueur d'onde de 600nm\nE = h*c/l\nprint(E,'J')",
       "codeCells": [
         "# Premier programme Python\nprint(\"Bonjour tout le monde\")",
         "# Calcul de l'énergie d'un photon\nh = 6.626070e-34 # la constante de Planck en J.s\nc = 299792456.2 # vitesse de la lumière en m/s\nl = 600e-9 # exprimé en m soit une longueur d'onde de 600nm\nE = h*c/l\nprint(E,'J')"
       ],
-      "source": "Cours_XLG2CE814_25_26_ChapI.pptx",
-      "sourceSlide": 7,
-      "tryit": ""
+      "tryit": "",
+      "practice": {
+        "task": "Exécutez les deux exemples. Doublez ensuite l dans le calcul du photon et réexécutez la cellule.",
+        "expected": "Le message s’affiche avec print. Lorsque la longueur d’onde double, l’énergie est divisée par deux."
+      },
+      "cellLabels": [
+        "Afficher un message",
+        "Calculer l’énergie d’un photon"
+      ]
     },
     {
       "id": "lire-erreurs",
-      "title": "Lire et résoudre une erreur",
+      "title": "Diagnostiquer et corriger un NameError",
       "tp": 1,
-      "goal": "Complément pédagogique · Préparer les TP",
-      "body": "<p>Lisez la dernière ligne du message, puis retrouvez la ligne de code indiquée. Une erreur n’efface pas nécessairement les variables déjà créées.</p><ul><li><strong>NameError</strong> : nom inconnu. Vérifiez l’orthographe et l’exécution de la cellule qui définit la variable.</li><li><strong>IndentationError</strong> : vérifiez l’alignement des instructions après <code>if</code>, <code>for</code>, <code>while</code> ou <code>def</code>.</li><li><strong>FileNotFoundError</strong> : vérifiez l’importation du fichier et son nom exact.</li><li><strong>KeyError</strong> : affichez <code>df.columns</code> avant de choisir une colonne.</li></ul><p>Pour vous entraîner, remplacez temporairement <code>concentration</code> par <code>Concentration</code> dans la seconde cellule. Observez le message, puis corrigez le nom.</p>",
+      "goal": "Repérer un nom de variable incorrect dans un message d’erreur.",
+      "body": "<p>La deuxième cellule contient une <strong>erreur volontaire</strong>. Python distingue les majuscules et les minuscules : deux noms qui diffèrent par leur casse désignent deux variables différentes.</p><p>Exécutez les cellules une par une. Dans le message, repérez le type <code>NameError</code>, le nom inconnu et la ligne concernée. Le programme n’a pas trouvé de valeur associée à ce nom.</p><p>Pour terminer, corrigez la cellule fautive puis réexécutez-la. Le message rouge fait ici partie de l’activité, ce n’est pas un dysfonctionnement de Basthon.</p>",
       "codeCells": [
         "concentration=0.02",
-        "print(concentration)"
+        "# Erreur volontaire : observez le message, puis corrigez cette cellule\nprint(Concentration)"
       ],
-      "code": "concentration=0.02\n\nprint(concentration)",
+      "code": "concentration=0.02\n\n# Erreur volontaire : observez le message, puis corrigez cette cellule\nprint(Concentration)",
       "tryit": "",
       "cellLabels": [
-        "Exemple complémentaire",
-        "Exemple complémentaire"
-      ]
+        "Créer une variable",
+        "Erreur volontaire à diagnostiquer puis corriger"
+      ],
+      "expectedErrors": {
+        "1": "NameError"
+      },
+      "practice": {
+        "task": "Exécutez la cellule 1, puis la cellule 2. Comparez le nom affiché dans l’erreur avec celui défini dans la cellule 1 et corrigez-le.",
+        "expected": "La seconde cellule produit d’abord un NameError pour Concentration. Après remplacement par concentration, elle affiche 0.02."
+      }
     },
     {
       "id": "ppt-08",
       "title": "Les listes",
       "tp": 1,
-      "goal": "Chapitre I · Diapositive 8",
-      "body": "<p>Permet de stocker une série de données de différentes natures<br><br>Permet d’extraire une ou une série de données<br><br>Listes peuvent être additionner<br><br></p><p>Structure de données</p><p>a/ Liste (list)</p><p>Pour indiquer une liste, on utilise des crochets « [] » et on sépare les différents éléments par une virgule</p><p>Une valeur entre crochet indique une position dans la liste.<br>Deux valeurs séparées par « : » indique une plage de donnée<br>L’utilisation de « :: » permet d ’indiquer un pas </p><p>La numérotation commence à 0<br>Un valeur négative indique un dénombrement par la fin</p><details><summary>Voir les captures originales (avant relecture)</summary><figure><img src=\"assets/cours-source/s8-0.png\" alt=\"Exemple original de la diapositive 8\" style=\"max-width:100%;height:auto\"></figure><figure><img src=\"assets/cours-source/s8-2.png\" alt=\"Exemple original de la diapositive 8\" style=\"max-width:100%;height:auto\"></figure><figure><img src=\"assets/cours-source/s8-1.png\" alt=\"Exemple original de la diapositive 8\" style=\"max-width:100%;height:auto\"></figure></details><aside><strong>Repère</strong><p>Dans une tranche <code>L1[début:fin:pas]</code>, la borne de fin est exclue. L’indice −1 désigne le dernier élément, −2 l’avant-dernier. Une variable doit être définie avant son utilisation.</p></aside>",
+      "goal": "Créer une liste et sélectionner ses éléments.",
+      "body": "<p>Une liste utilise des crochets et peut contenir plusieurs types de données. Ses indices commencent à 0 ; un indice négatif compte à partir de la fin.</p><p>Dans <code>L1[début:fin:pas]</code>, la borne de fin est exclue. <code>L1[::2]</code> sélectionne un élément sur deux. L’opérateur <code>+</code> concatène deux listes : il ne réalise pas une addition élément par élément.</p>",
       "code": "a=3\nL1=[a,4,'bleu',8,2.5,'rouge',14]\nprint(L1)\nprint(type(L1))\n\na=3\nL1=[a,4,'bleu',8,2.5,'rouge',14]\nprint(L1[0]) #valeur en première place de la liste\nprint(L1[::2]) #valeurs données avec un pas de 2\nprint(L1[2:5]) #valeurs données de la troisième à la cinquième position\nprint(L1[2:-2]) #valeurs de la troisième position à la position -2 exclue\nprint(L1[2::3]) #valeurs données à partir de la troisième position avec un pas de 3\n\nL2=[3,2-5]\nL1+L2",
       "codeCells": [
         "a=3\nL1=[a,4,'bleu',8,2.5,'rouge',14]\nprint(L1)\nprint(type(L1))",
         "a=3\nL1=[a,4,'bleu',8,2.5,'rouge',14]\nprint(L1[0]) #valeur en première place de la liste\nprint(L1[::2]) #valeurs données avec un pas de 2\nprint(L1[2:5]) #valeurs données de la troisième à la cinquième position\nprint(L1[2:-2]) #valeurs de la troisième position à la position -2 exclue\nprint(L1[2::3]) #valeurs données à partir de la troisième position avec un pas de 3",
         "L2=[3,2-5]\nL1+L2"
       ],
-      "source": "Cours_XLG2CE814_25_26_ChapI.pptx",
-      "sourceSlide": 8,
-      "tryit": ""
+      "tryit": "",
+      "practice": {
+        "task": "Exécutez les cellules dans l’ordre. Repérez les éléments retenus par L1[2::3], puis observez L2 et le résultat de L1+L2.",
+        "expected": "La tranche L1[2::3] donne [\"bleu\", \"rouge\"]. Dans L2, 2-5 est un calcul et vaut −3 : L2 contient donc [3, −3]."
+      },
+      "cellLabels": [
+        "Créer une liste",
+        "Sélectionner des éléments et des tranches",
+        "Concaténer deux listes"
+      ]
     },
     {
       "id": "ppt-09",
       "title": "Modifier une liste",
       "tp": 1,
-      "goal": "Chapitre I · Diapositive 9",
-      "body": "<p>L’instruction «.append » permet d’ajouter des donnés en fin de liste. Si l’on veut ajouter une donnée dans un position particulière on utilise l’instruction « .insert » </p><p>L’instruction « .remove » permet de supprimer une donnée en la nommant.<br>L’instruction « .pop » permet de supprimer une donnée en indiquant sa position dans la liste</p><p>Une liste est mutable (un élément peut être ajouter ou retirer de la liste)</p><p>En indiquant une position dans la liste, il est possible de lui affecter une nouvelle valeur. </p><p>Modification d’un donnée</p><p>Ajout de données</p><p>Suppression de données</p><details><summary>Voir les captures originales (avant relecture)</summary><figure><img src=\"assets/cours-source/s9-2.png\" alt=\"Exemple original de la diapositive 9\" style=\"max-width:100%;height:auto\"></figure><figure><img src=\"assets/cours-source/s9-1.png\" alt=\"Exemple original de la diapositive 9\" style=\"max-width:100%;height:auto\"></figure><figure><img src=\"assets/cours-source/s9-0.png\" alt=\"Exemple original de la diapositive 9\" style=\"max-width:100%;height:auto\"></figure></details>",
+      "goal": "Ajouter, modifier et supprimer des éléments.",
+      "body": "<p>Une liste est mutable : on peut remplacer une valeur par affectation, ajouter un élément avec <code>append</code> ou <code>insert</code>, et en supprimer avec <code>remove</code> ou <code>pop</code>.</p><p><code>append</code> ajoute à la fin ; <code>insert</code> reçoit une position. <code>remove</code> cherche une valeur ; <code>pop</code> reçoit un indice. Chaque cellule recrée ici sa liste de départ.</p>",
       "code": "# on modifie la donnée en troisième position\na=3\nL1=[a,2.5,'bleu']\nL1[2]=5\nprint(L1)\n\na=3\nL1=[a,2.5,'bleu']\nL1.append('rouge') # on ajoute la donnée 'rouge' en fin de liste\nprint(L1)\nL1.insert(1,'rouge') # on ajoute la donnée 'rouge' en deuxième position\nprint(L1)\n\na=3\nL1=[a,2.5,'bleu','rouge']\nL1.remove('rouge') # on supprime la donnée 'rouge'\nprint(L1)\nL1.pop(1) # on supprime la donnée en deuxième position\nprint(L1)",
       "codeCells": [
         "# on modifie la donnée en troisième position\na=3\nL1=[a,2.5,'bleu']\nL1[2]=5\nprint(L1)",
         "a=3\nL1=[a,2.5,'bleu']\nL1.append('rouge') # on ajoute la donnée 'rouge' en fin de liste\nprint(L1)\nL1.insert(1,'rouge') # on ajoute la donnée 'rouge' en deuxième position\nprint(L1)",
         "a=3\nL1=[a,2.5,'bleu','rouge']\nL1.remove('rouge') # on supprime la donnée 'rouge'\nprint(L1)\nL1.pop(1) # on supprime la donnée en deuxième position\nprint(L1)"
       ],
-      "source": "Cours_XLG2CE814_25_26_ChapI.pptx",
-      "sourceSlide": 9,
-      "tryit": ""
+      "tryit": "",
+      "practice": {
+        "task": "Comparez les listes affichées avant et après chaque opération. Dans la dernière cellule, expliquez pourquoi pop(1) supprime 2.5.",
+        "expected": "L’indice 1 désigne le deuxième élément. Après la suppression de \"rouge\", la liste vaut [3, 2.5, \"bleu\"]."
+      },
+      "cellLabels": [
+        "Remplacer un élément",
+        "Ajouter des éléments",
+        "Supprimer une valeur puis un élément par son indice"
+      ]
     },
     {
       "id": "ppt-10",
       "title": "Tuples et dictionnaires",
       "tp": 1,
-      "goal": "Chapitre I · Diapositive 10",
-      "body": "<p>b/ N-uplets (tuple)</p><p>c/ Les dictionnaires (dict)</p><p>Même propriétés que les listes exceptés qu’ils ne sont pas mutable</p><p>Structure de données organisée sous la forme d’une paire clé-valeur<br><br>Le dictionnaire est un objet mutable</p><p>Pour indiquer un N-uplets, on utilise des parenthèses « () » et on sépare les différents éléments par une virgule</p><p>Pour indiquer un dictionnaire, on utilise des accolades. La clé (keys) est indiqué en premier puis séparé de la valeur (values) par deux point. Chaque paire clé-valeur est séparée par une virgule</p><details><summary>Voir les captures originales du cours</summary><figure><img src=\"assets/cours-source/s10-0.png\" alt=\"Exemple original de la diapositive 10\" style=\"max-width:100%;height:auto\"></figure><figure><img src=\"assets/cours-source/s10-2.png\" alt=\"Exemple original de la diapositive 10\" style=\"max-width:100%;height:auto\"></figure><figure><img src=\"assets/cours-source/s10-1.png\" alt=\"Exemple original de la diapositive 10\" style=\"max-width:100%;height:auto\"></figure></details>",
+      "goal": "Organiser des données dans des tuples et des dictionnaires.",
+      "body": "<p>Un tuple est une séquence dont les éléments ne peuvent pas être réaffectés comme ceux d’une liste. L’exemple utilise des parenthèses pour créer <code>T1</code>.</p><p>Un dictionnaire associe des clés à des valeurs. Les clés \"H\", \"C\" et \"O\" donnent ici accès à des masses molaires. Les méthodes <code>keys()</code> et <code>values()</code> permettent d’observer cette organisation. La dernière cellule ajoute la clé \"N\".</p>",
       "code": "T1=(1,-4,3,5)\nprint(T1)\nprint(type(T1))\n\n# Dictionnaires rassemblant les valeurs de masse molaire\ndict1={'H':1.00784,'C':12.011,'O':15.999}\nprint(dict1)\nprint(type(dict1))\nprint(dict1.keys())\nprint(dict1.values())\n\ndict1['N']=14.0067\ndict1",
       "codeCells": [
         "T1=(1,-4,3,5)\nprint(T1)\nprint(type(T1))",
         "# Dictionnaires rassemblant les valeurs de masse molaire\ndict1={'H':1.00784,'C':12.011,'O':15.999}\nprint(dict1)\nprint(type(dict1))\nprint(dict1.keys())\nprint(dict1.values())",
         "dict1['N']=14.0067\ndict1"
       ],
-      "source": "Cours_XLG2CE814_25_26_ChapI.pptx",
-      "sourceSlide": 10,
-      "tryit": ""
+      "tryit": "",
+      "practice": {
+        "task": "Exécutez les cellules dans l’ordre, puis ajoutez dans une cellule d’essai print(dict1[\"O\"]).",
+        "expected": "La recherche par la clé \"O\" affiche 15.999 ; il n’est pas nécessaire de connaître sa position dans le dictionnaire."
+      },
+      "cellLabels": [
+        "Créer un tuple",
+        "Créer et examiner un dictionnaire",
+        "Ajouter une paire clé-valeur"
+      ]
     },
     {
       "id": "ppt-11",
       "title": "Définir et utiliser une fonction",
       "tp": 1,
-      "goal": "Chapitre I · Diapositive 11",
-      "body": "<p>L’utilisation de fonctions (function)</p><p>a/ Définition d’un fonction</p><p>b/ Utilisation d’une fonction</p><details><summary>Voir les captures originales (avant relecture)</summary><figure><img src=\"assets/cours-source/s11-1.png\" alt=\"Exemple original de la diapositive 11\" style=\"max-width:100%;height:auto\"></figure><figure><img src=\"assets/cours-source/s11-0.png\" alt=\"Exemple original de la diapositive 11\" style=\"max-width:100%;height:auto\"></figure></details>",
+      "goal": "Définir une fonction et réutiliser un calcul.",
+      "body": "<p><code>def</code> définit une fonction. Les paramètres entre parenthèses reçoivent les valeurs transmises lors de l’appel. Les instructions indentées constituent le corps de la fonction ; <code>return</code> renvoie le résultat.</p><p>La première fonction calcule un carré. La seconde réutilise la relation V<sub>M</sub> = RT/p pour deux jeux de température et de pression. La température est en kelvins et la pression en pascals ; le facteur 1 000 convertit les m<sup>3</sup>·mol<sup>−1</sup> en L·mol<sup>−1</sup>.</p>",
       "code": "def function(x):\n    y=x**2\n    return y\nprint(type(function))\nprint(function(2))\n\n#On définit une fonction permettant de calculer le volume molaire d'un gaz parfait\ndef volume_molaire(T,p):\n    R=8.314\n    V_M=R*T/p*1000 #multiplier par 1000 permet d'avoir le résultat non pas en m3/mol mais en L/mol\n    return V_M\n#calcul du volume molaire dans les conditions normales de température et de pression\nprint('V_M dans les CNTP',volume_molaire(273.15,1.013e5),'L/mol')\n#calcul du volume molaire dans les conditions standard de température et de pression\nprint('V_M dans les CSTP',volume_molaire(293.15,1e5),'L/mol')",
       "codeCells": [
         "def function(x):\n    y=x**2\n    return y\nprint(type(function))\nprint(function(2))",
         "#On définit une fonction permettant de calculer le volume molaire d'un gaz parfait\ndef volume_molaire(T,p):\n    R=8.314\n    V_M=R*T/p*1000 #multiplier par 1000 permet d'avoir le résultat non pas en m3/mol mais en L/mol\n    return V_M\n#calcul du volume molaire dans les conditions normales de température et de pression\nprint('V_M dans les CNTP',volume_molaire(273.15,1.013e5),'L/mol')\n#calcul du volume molaire dans les conditions standard de température et de pression\nprint('V_M dans les CSTP',volume_molaire(293.15,1e5),'L/mol')"
       ],
-      "source": "Cours_XLG2CE814_25_26_ChapI.pptx",
-      "sourceSlide": 11,
-      "tryit": ""
+      "tryit": "",
+      "practice": {
+        "task": "Exécutez les exemples puis appelez volume_molaire(293.15,2e5) dans une nouvelle cellule. Comparez avec la pression 1e5 Pa à la même température.",
+        "expected": "La fonction reçoit de nouvelles valeurs sans être réécrite. À température constante, doubler la pression divise le volume molaire par deux."
+      },
+      "cellLabels": [
+        "Définir une fonction qui renvoie un carré",
+        "Réutiliser une fonction pour le volume molaire"
+      ]
     },
     {
       "id": "ppt-12",
       "title": "Les conditions",
       "tp": 1,
-      "goal": "Chapitre I · Diapositive 12",
-      "body": "<p>Boucles et conditions</p><p>a/ Condition</p><p>Utilisation de « if » pour une condition<br>Indentation nécessaire pour délimiter le bloc conditionnel<br>Combinaison « if » puis « else » pour deux conditions<br>Le fait d’intercaler « elif » entre « if » et « else » permet de décrire des cas avec plus de deux conditions</p><details><summary>Voir les captures originales du cours</summary><figure><img src=\"assets/cours-source/s12-0.png\" alt=\"Exemple original de la diapositive 12\" style=\"max-width:100%;height:auto\"></figure></details>",
-      "code": "# Résolution d'une équation du second degré\ndef deg2(a,b,c):\n    delta=b**2-4*a*c # on définit ici le calcul du discriminant\n    if delta>0: # cas où le discriminant est positif\n        d=delta**0.5\n        x1=(-b+d)/(2*a)\n        x2=(-b-d)/(2*a)\n        return ['x1=',x1,'x2=',x2]\n    elif delta==0: # cas où le discriminant est nul. Il est important de mettre == et non =.\n# Le == permet de comparer deux valeurs alors que le = affecte une valeur à une variable\n        return [-b/(2*a)]\n    else:\n        return [\"l'équation n'a pas de solution réelle\"]\nprint (deg2(1,10**-7.5,-10**-9.5))",
+      "goal": "Choisir les instructions à exécuter selon une condition.",
+      "body": "<p><code>if</code>, <code>elif</code> et <code>else</code> sélectionnent un bloc selon une condition. Une seule branche est exécutée. L’indentation délimite chaque bloc.</p><p>La fonction deg2 conserve les trois cas du discriminant Δ : positif, nul ou négatif. L’égalité se teste avec <code>==</code> ; <code>=</code> sert à affecter une valeur. On suppose ici que a est non nul.</p>",
+      "code": "# Résolution d'une équation du second degré\ndef deg2(a,b,c):\n    delta=b**2-4*a*c # on définit ici le calcul du discriminant\n    if delta>0: # cas où le discriminant est positif\n        d=delta**0.5\n        x1=(-b+d)/(2*a)\n        x2=(-b-d)/(2*a)\n        return ['x1=',x1,'x2=',x2]\n    elif delta==0: # cas où le discriminant est nul. Il est important de mettre == et non =.\n# Le == permet de comparer deux valeurs alors que le = affecte une valeur à une variable\n        return [-b/(2*a)]\n    else:\n        return [\"l'équation n'a pas de solution réelle\"]\nprint (deg2(1,10**-7.5,-10**-9.5))\n\n# Essais complémentaires des trois branches\nprint(deg2(1,-3,2))\nprint(deg2(1,-2,1))\nprint(deg2(1,0,1))",
       "codeCells": [
-        "# Résolution d'une équation du second degré\ndef deg2(a,b,c):\n    delta=b**2-4*a*c # on définit ici le calcul du discriminant\n    if delta>0: # cas où le discriminant est positif\n        d=delta**0.5\n        x1=(-b+d)/(2*a)\n        x2=(-b-d)/(2*a)\n        return ['x1=',x1,'x2=',x2]\n    elif delta==0: # cas où le discriminant est nul. Il est important de mettre == et non =.\n# Le == permet de comparer deux valeurs alors que le = affecte une valeur à une variable\n        return [-b/(2*a)]\n    else:\n        return [\"l'équation n'a pas de solution réelle\"]\nprint (deg2(1,10**-7.5,-10**-9.5))"
+        "# Résolution d'une équation du second degré\ndef deg2(a,b,c):\n    delta=b**2-4*a*c # on définit ici le calcul du discriminant\n    if delta>0: # cas où le discriminant est positif\n        d=delta**0.5\n        x1=(-b+d)/(2*a)\n        x2=(-b-d)/(2*a)\n        return ['x1=',x1,'x2=',x2]\n    elif delta==0: # cas où le discriminant est nul. Il est important de mettre == et non =.\n# Le == permet de comparer deux valeurs alors que le = affecte une valeur à une variable\n        return [-b/(2*a)]\n    else:\n        return [\"l'équation n'a pas de solution réelle\"]\nprint (deg2(1,10**-7.5,-10**-9.5))",
+        "# Essais complémentaires des trois branches\nprint(deg2(1,-3,2))\nprint(deg2(1,-2,1))\nprint(deg2(1,0,1))"
       ],
-      "source": "Cours_XLG2CE814_25_26_ChapI.pptx",
-      "sourceSlide": 12,
-      "tryit": ""
+      "tryit": "",
+      "practice": {
+        "task": "Exécutez la définition, puis les trois appels complémentaires. Associez chaque résultat à la branche if, elif ou else.",
+        "expected": "Les appels donnent deux racines (2 et 1), une racine double (1), puis l’absence de solution réelle."
+      },
+      "cellLabels": [
+        "Définir la fonction et tester le cas du cours",
+        "Complément : exercer chacune des trois branches"
+      ]
     },
     {
       "id": "ppt-13",
       "title": "Les boucles",
       "tp": 1,
-      "goal": "Chapitre I · Diapositive 13",
-      "body": "<p>b/ Boucle</p><p>La boucle « for » est une boucle définie dans une plage de donnée<br>L’ajout de « in range » permet d’indiquer les paramètres, start/stop/step<br>La valeur indiquée dans le paramètre stop est exclue<br>Si une seule valeur, il s’agit du paramètre stop le start est de 0 et le pas de 1<br>Si deux valeurs, il s’agit du paramètre start et stop le pas est de 1.<br>Avec une boucle for les valeurs de start/stop/step sont nécessairement des entiers<br><br></p><p>La boucle « while » est une boucle conditionnelle<br>La boucle continue tant que la condition est vraie<br>Avec la boucle « while » on peut utiliser des nombres décimaux</p><details><summary>Voir les captures originales (avant relecture)</summary><figure><img src=\"assets/cours-source/s13-0.png\" alt=\"Exemple original de la diapositive 13\" style=\"max-width:100%;height:auto\"></figure><figure><img src=\"assets/cours-source/s13-1.png\" alt=\"Exemple original de la diapositive 13\" style=\"max-width:100%;height:auto\"></figure></details>",
+      "goal": "Répéter un calcul avec for et while.",
+      "body": "<p><code>for</code> parcourt les valeurs fournies par <code>range(début, fin, pas)</code>. La borne de fin est exclue et les arguments de range sont entiers.</p><p><code>while</code> répète son bloc tant que la condition est vraie. La condition est testée avant chaque passage. Une instruction du bloc doit permettre de faire évoluer cette condition pour éviter une boucle sans fin.</p>",
       "code": "for i in range (0,10,2):\n    a=i\n    print(i)\n\na=2\nwhile a<=8:\n    a=3*a\n    print(a)",
       "codeCells": [
         "for i in range (0,10,2):\n    a=i\n    print(i)",
         "a=2\nwhile a<=8:\n    a=3*a\n    print(a)"
       ],
-      "source": "Cours_XLG2CE814_25_26_ChapI.pptx",
-      "sourceSlide": 13,
-      "tryit": ""
+      "tryit": "",
+      "practice": {
+        "task": "Prévoyez les valeurs affichées dans chaque cellule. Expliquez pourquoi la boucle while affiche 18 alors que sa condition est a&lt;=8.",
+        "expected": "for affiche 0, 2, 4, 6 et 8. while entre dans son second passage avec a=6, puis calcule et affiche 18 avant le prochain test."
+      },
+      "cellLabels": [
+        "Parcourir un intervalle avec for",
+        "Répéter un calcul avec while"
+      ]
     },
     {
       "id": "ppt-14",
       "title": "Les modules",
       "tp": 1,
-      "goal": "Chapitre I · Diapositive 14",
-      "body": "<p>Bibliothèque présente par défaut dans Python :<br>Math : Opération mathématiques de base, bibliothèque installé avec Python<br><br>Bibliothèque nécessitant une installation :<br><br>Numpy : Opération mathématiques et statistiques de données, de tableaux et/ou matrices<br>Matplotlib : Visualisation de données<br>Scipy : ensemble de bibliothèque à usage scientifique notamment les ajustements (affines ou non affines)<br>Pandas : Lecture, Modification et Ecriture de données<br>Appel d’une bibliothèque par un alias:<br><br></p><p>Les modules</p><p>Appel d’un fonction d’une bibliothèque</p><p>Certaine instruction peuvent se retrouver dans différents modules. Dans ce cas Python utilise l’instruction comme définie dans le dernier module importé. </p><aside><strong>Note pour l’utilisation interactive — ajout au support</strong><p>La commande pip install numpy du support est conservée ci-dessous comme référence. Elle n’est pas nécessaire dans Basthon, où NumPy est déjà disponible.</p></aside><pre><code>pip install numpy</code></pre><details><summary>Voir les captures originales du cours</summary><figure><img src=\"assets/cours-source/s14-0.png\" alt=\"Exemple original de la diapositive 14\" style=\"max-width:100%;height:auto\"></figure><figure><img src=\"assets/cours-source/s14-1.png\" alt=\"Exemple original de la diapositive 14\" style=\"max-width:100%;height:auto\"></figure><figure><img src=\"assets/cours-source/s14-2.png\" alt=\"Exemple original de la diapositive 14\" style=\"max-width:100%;height:auto\"></figure></details>",
+      "goal": "Importer une fonction ou une bibliothèque.",
+      "body": "<p>Les bibliothèques rassemblent des fonctions réutilisables. Dans Basthon, les bibliothèques scientifiques utilisées dans ce cours sont disponibles : il suffit de les importer.</p><p><code>from math import log10</code> permet d’appeler directement log10. <code>import numpy as np</code> donne un nom court au module et conduit à écrire <code>np.log10</code>. Cet accès explicite évite la confusion entre fonctions portant le même nom.</p>",
       "code": "from math import log10\na=log10(0.1)\nprint(a)\n\nimport numpy as np\na=np.log10(0.1)\nprint(a)",
       "codeCells": [
         "from math import log10\na=log10(0.1)\nprint(a)",
         "import numpy as np\na=np.log10(0.1)\nprint(a)"
       ],
-      "source": "Cours_XLG2CE814_25_26_ChapI.pptx",
-      "sourceSlide": 14,
-      "tryit": ""
+      "tryit": "",
+      "practice": {
+        "task": "Comparez la façon d’appeler le logarithme dans les deux cellules, puis remplacez 0.1 par 100.",
+        "expected": "Les deux exemples calculent le logarithme décimal : −1 pour 0.1 et 2 pour 100."
+      },
+      "cellLabels": [
+        "Importer une fonction de math",
+        "Importer NumPy avec un alias"
+      ]
     },
     {
       "id": "ppt-15",
       "title": "Créer des tableaux NumPy",
       "tp": 2,
-      "goal": "Chapitre I · Diapositive 15",
-      "body": "<p>Numpy abbreviation de « Numerical Python » <br>Un des modules les plus utilisé pour le calcul scientifique en Python<br>Effectuer des calculs logiques et mathématiques sur des tableaux et des matrices<br>Tableaux de données multidimensionnels et homogènes : les Ndarrays (ndimensional arrays) avec la fonction array([valeur1,…]), arange(début, fin exclue, pas), linspace(début, fin incluse, nombre de points)<br><br>Le traitement des tableaux numpy est plus rapides que les listes Python<br>Mais données d’une seule nature.</p><p>https://numpy.org/</p><details><summary>Voir les captures originales (avant relecture)</summary><figure><img src=\"assets/cours-source/s15-1.png\" alt=\"Exemple original de la diapositive 15\" style=\"max-width:100%;height:auto\"></figure></details>",
-      "code": "import numpy as np\na=np.array([0,10,20,30,40])\nprint(a)\n\nimport numpy as np\na=np.arange(0,50,10)\nprint(a)\n\nimport numpy as np\na=np.array([0,10,20,30,40])\nprint(a)\nprint(type(a))",
+      "goal": "Construire un tableau et une série de valeurs.",
+      "body": "<p><code>np.array</code> construit un tableau à partir de valeurs explicites. <code>np.arange</code> définit une série par un pas et exclut la borne de fin. <code>np.linspace</code> définit une série par un nombre de points et inclut, par défaut, ses deux bornes.</p><p>Un tableau NumPy possède un type de données commun et permet des opérations sur l’ensemble de ses valeurs. <code>type(a)</code> identifie ici l’objet comme un ndarray.</p>",
+      "code": "import numpy as np\na=np.array([0,10,20,30,40])\nprint(a)\n\nimport numpy as np\na=np.arange(0,50,10)\nprint(a)\n\nimport numpy as np\na=np.array([0,10,20,30,40])\nprint(a)\nprint(type(a))\n\n# Complément : choisir le nombre de points\nimport numpy as np\na=np.linspace(0,40,5)\nprint(a)",
       "codeCells": [
         "import numpy as np\na=np.array([0,10,20,30,40])\nprint(a)",
         "import numpy as np\na=np.arange(0,50,10)\nprint(a)",
-        "import numpy as np\na=np.array([0,10,20,30,40])\nprint(a)\nprint(type(a))"
+        "import numpy as np\na=np.array([0,10,20,30,40])\nprint(a)\nprint(type(a))",
+        "# Complément : choisir le nombre de points\nimport numpy as np\na=np.linspace(0,40,5)\nprint(a)"
       ],
-      "source": "Cours_XLG2CE814_25_26_ChapI.pptx",
-      "sourceSlide": 15,
-      "tryit": ""
+      "tryit": "",
+      "practice": {
+        "task": "Exécutez les quatre cellules et comparez leurs tableaux. Remplacez ensuite le dernier argument de linspace par 6.",
+        "expected": "Les exemples initiaux produisent les valeurs 0, 10, 20, 30 et 40. Avec six points entre 0 et 40, le pas devient 8."
+      },
+      "cellLabels": [
+        "Créer un tableau avec array",
+        "Créer une série avec arange",
+        "Identifier le type ndarray",
+        "Complément : créer une série avec linspace"
+      ]
     },
     {
       "id": "ppt-16",
       "title": "Extremums et réarrangement",
       "tp": 2,
-      "goal": "Chapitre I · Diapositive 16",
-      "body": "<p>Recherche d’extremum dans un Ndarrays</p><p>Réarrangement de Ndarray (np.reshape)</p><p>En premier le nombre de ligne puis le nombre de colonne</p><details><summary>Voir les captures originales du cours</summary><figure><img src=\"assets/cours-source/s16-0.png\" alt=\"Exemple original de la diapositive 16\" style=\"max-width:100%;height:auto\"></figure><figure><img src=\"assets/cours-source/s16-1.png\" alt=\"Exemple original de la diapositive 16\" style=\"max-width:100%;height:auto\"></figure></details>",
+      "goal": "Trouver des extremums et modifier la forme d’un tableau.",
+      "body": "<p><code>min</code> et <code>max</code> renvoient des valeurs ; <code>argmin</code> et <code>argmax</code> renvoient leurs indices.</p><p><code>reshape(3,2)</code> organise les six éléments du second tableau en trois lignes et deux colonnes. Le nombre total d’éléments doit rester identique.</p>",
       "code": "import numpy as np\na=np.linspace(0,40,5)\nb=np.min(a)\nc=np.max(a)\nd=np.argmin(a)\ne=np.argmax(a)\nprint('minimum du narrays a',b)\nprint('maximum du narrays a',c)\nprint('indice du minimum du narrays a',d)\nprint('indice du maximum du narrays a',e)\n\nimport numpy as np\na=np.linspace(0,40,6).reshape(3,2)\nprint(a)",
       "codeCells": [
         "import numpy as np\na=np.linspace(0,40,5)\nb=np.min(a)\nc=np.max(a)\nd=np.argmin(a)\ne=np.argmax(a)\nprint('minimum du narrays a',b)\nprint('maximum du narrays a',c)\nprint('indice du minimum du narrays a',d)\nprint('indice du maximum du narrays a',e)",
         "import numpy as np\na=np.linspace(0,40,6).reshape(3,2)\nprint(a)"
       ],
-      "source": "Cours_XLG2CE814_25_26_ChapI.pptx",
-      "sourceSlide": 16,
-      "tryit": ""
+      "tryit": "",
+      "practice": {
+        "task": "Distinguez les valeurs et les indices affichés dans la première cellule. Dans la seconde, comparez reshape(3,2) à reshape(2,3).",
+        "expected": "Le minimum et le maximum sont 0 et 40, aux indices 0 et 4. Les deux formes du second tableau contiennent les mêmes six valeurs."
+      },
+      "cellLabels": [
+        "Valeurs extrêmes et indices",
+        "Changer la forme du tableau"
+      ]
     },
     {
       "id": "derivee-numerique",
       "title": "Calculer une dérivée numérique",
       "tp": 2,
-      "goal": "Complément pédagogique · Préparer les TP",
-      "body": "<p>À partir de valeurs de <i>x</i> et de <i>y</i>, <code>np.gradient(y, x)</code> estime dy/dx. Le second argument précise les abscisses : sans lui, Python suppose un espacement de 1.</p><p>Pour y = x<sup>2</sup>, comparez la dérivée numérique à 2x. Les écarts aux extrémités sont liés à l’approximation numérique. Dans le TP2, le même principe s’applique à dpH/dV<sub>B</sub> ; son unité dépend de l’unité choisie pour V<sub>B</sub>.</p>",
+      "goal": "Estimer une dérivée en tenant compte des abscisses.",
+      "body": "<p><code>np.gradient(y,x)</code> estime dy/dx à partir des points du tableau. Le second argument fournit les abscisses : sans lui, l’espacement est supposé égal à 1.</p><p>Pour y = x<sup>2</sup>, la dérivée analytique est 2x. Le code trace les deux résultats pour comparer le calcul numérique à la valeur connue. Pour le TP2, la même méthode donne dpH/dV<sub>B</sub>.</p>",
       "codeCells": [
         "import numpy as np\nimport matplotlib.pyplot as plt\nx=np.linspace(0,10,100)\ny=x**2\ndy_dx=np.gradient(y,x)\nplt.plot(x,dy_dx,label='Dérivée numérique')\nplt.plot(x,2*x,'--',label='Dérivée analytique')\nplt.xlabel('x')\nplt.ylabel('dy/dx')\nplt.legend()\nplt.show()"
       ],
       "code": "import numpy as np\nimport matplotlib.pyplot as plt\nx=np.linspace(0,10,100)\ny=x**2\ndy_dx=np.gradient(y,x)\nplt.plot(x,dy_dx,label='Dérivée numérique')\nplt.plot(x,2*x,'--',label='Dérivée analytique')\nplt.xlabel('x')\nplt.ylabel('dy/dx')\nplt.legend()\nplt.show()",
       "tryit": "",
       "cellLabels": [
-        "Exemple complémentaire"
-      ]
+        "Comparer une dérivée numérique et une dérivée analytique"
+      ],
+      "practice": {
+        "task": "Exécutez le tracé, puis remplacez les 100 points par 10 et comparez les extrémités des courbes.",
+        "expected": "Les courbes sont proches. Une grille plus grossière rend les écarts aux extrémités plus visibles."
+      }
     },
     {
       "id": "ppt-17",
       "title": "Les nombres aléatoires",
       "tp": 2,
-      "goal": "Chapitre I · Diapositive 17",
-      "body": "<p>Génération de nombres aléatoires</p><p>b/ Génération de nombre aléatoire suivant la loi normale </p><p>a/ Tirage aléatoire de nombre entier</p><p>La fonction numpy.random.randint permet de tirer un ou plusieurs nombres entiers dans un intervalle donné [a,b[</p><p>La fonction numpy.random.normal permet de générer des nombres aléatoires suivant la loi normale, en précisant la valeur moyenne, , et l’écart-type, </p><details><summary>Voir les captures originales du cours</summary><figure><img src=\"assets/cours-source/s17-0.png\" alt=\"Exemple original de la diapositive 17\" style=\"max-width:100%;height:auto\"></figure><figure><img src=\"assets/cours-source/s17-1.png\" alt=\"Exemple original de la diapositive 17\" style=\"max-width:100%;height:auto\"></figure></details>",
+      "goal": "Générer des valeurs aléatoires et décrire leur distribution.",
+      "body": "<p><code>np.random.randint(1,10,20)</code> tire vingt entiers de 1 inclus à 10 exclu. Dans cet exemple, le tableau obtenu est ajouté à une liste : la liste contient donc un tableau, et non vingt éléments distincts.</p><p><code>np.random.normal(mu,sigma,N)</code> génère N valeurs suivant une loi normale. <code>mean()</code> et <code>std()</code> calculent la moyenne et l’écart-type des valeurs générées. Les résultats varient d’un tirage à l’autre.</p>",
       "code": "import numpy as np\na=[]\nb=np.random.randint(1,10,20)\na.append(b)\nprint(a)\n\nimport numpy as np\nmu = 10.0\nsigma = 0.1\nN=1000\na=np.random.normal(mu,sigma,N)\nm=a.mean()\ns=a.std()\nprint(f'mu = {m:.2f}','\\t',f'sigma = {s:.2f}')",
       "codeCells": [
         "import numpy as np\na=[]\nb=np.random.randint(1,10,20)\na.append(b)\nprint(a)",
         "import numpy as np\nmu = 10.0\nsigma = 0.1\nN=1000\na=np.random.normal(mu,sigma,N)\nm=a.mean()\ns=a.std()\nprint(f'mu = {m:.2f}','\\t',f'sigma = {s:.2f}')"
       ],
-      "source": "Cours_XLG2CE814_25_26_ChapI.pptx",
-      "sourceSlide": 17,
-      "tryit": ""
+      "tryit": "",
+      "practice": {
+        "task": "Réexécutez les cellules. Dans la deuxième, diminuez N de 1000 à 10 et observez la variabilité de m et s entre les exécutions.",
+        "expected": "Les entiers changent tout en restant dans l’intervalle prévu. Avec un petit échantillon, moyenne et écart-type fluctuent davantage autour des paramètres choisis."
+      },
+      "cellLabels": [
+        "Tirer des entiers",
+        "Simuler une loi normale et calculer ses statistiques"
+      ]
     },
     {
       "id": "ppt-18",
       "title": "Tracer une courbe",
       "tp": 3,
-      "goal": "Chapitre I · Diapositive 18",
-      "body": "<p>https://matplotlib.org/</p><p>subplot() permet de tracer deux graphs<br>plot() tracer une courbe<br>scatter() pour tracer un nuage de points</p><p>Tracer un graphique sous forme d’une courbe ou d’un nuage de point </p><p>legend() permet d’indiquer la légende<br>xlabel() permet d’indiquer le nom de l’axe des x<br>ylabel() permet d’indiquer le nom de l’axe des y<br>title() permet d’indiquer le nom du graphique</p><details><summary>Voir les captures originales du cours</summary><figure><img src=\"assets/cours-source/s18-1.png\" alt=\"Exemple original de la diapositive 18\" style=\"max-width:100%;height:auto\"></figure></details>",
+      "goal": "Représenter une fonction et nommer les axes.",
+      "body": "<p><code>plt.plot</code> trace les valeurs de la fonction ln(x). On commence à x=0.1 car le logarithme réel n’est défini que pour x strictement positif.</p><p><code>label</code> donne le nom du tracé ; <code>legend()</code> l’affiche. Les commandes xlabel, ylabel et title nomment les axes et la figure. <code>show()</code> demande l’affichage.</p>",
       "code": "import numpy as np\nimport matplotlib.pyplot as plt\nx=np.linspace(0.1,100,10000)\ndef f(x):\n    return np.log(x)\nplt.plot(x,f(x),label='y=ln(x)')\nplt.legend()\nplt.xlabel('x')\nplt.ylabel('y')\nplt.title('Représentation graphique de la fonction ln(x)')\nplt.show()",
       "codeCells": [
         "import numpy as np\nimport matplotlib.pyplot as plt\nx=np.linspace(0.1,100,10000)\ndef f(x):\n    return np.log(x)\nplt.plot(x,f(x),label='y=ln(x)')\nplt.legend()\nplt.xlabel('x')\nplt.ylabel('y')\nplt.title('Représentation graphique de la fonction ln(x)')\nplt.show()"
       ],
-      "source": "Cours_XLG2CE814_25_26_ChapI.pptx",
-      "sourceSlide": 18,
-      "tryit": ""
+      "tryit": "",
+      "practice": {
+        "task": "Exécutez le code, puis limitez la borne supérieure du tableau x à 10 et réexécutez.",
+        "expected": "Le même calcul est représenté sur un domaine plus court. La fonction reste inchangée."
+      },
+      "cellLabels": [
+        "Tracer et légender ln(x)"
+      ]
     },
     {
       "id": "ppt-19",
       "title": "Les couleurs Matplotlib",
       "tp": 3,
-      "goal": "Chapitre I · Diapositive 19",
-      "body": "<figure><img src=\"assets/cours-source/s19-0.png\" alt=\"Exemple original de la diapositive 19\" style=\"max-width:100%;height:auto\"></figure>",
-      "code": "",
-      "codeCells": [],
-      "source": "Cours_XLG2CE814_25_26_ChapI.pptx",
-      "sourceSlide": 19,
-      "tryit": ""
+      "goal": "Choisir les couleurs des tracés.",
+      "body": "<p>Le paramètre <code>color</code> règle la couleur d’un tracé. Cette activité reprend la courbe ln(x) et lui ajoute une couleur explicite.</p><p>Choisissez un nom dans le nuancier et comparez le rendu. Une couleur ne doit pas être le seul moyen de distinguer deux séries : utilisez aussi des styles de ligne ou des marqueurs.</p><figure><img src=\"assets/cours-source/s19-0.png\" alt=\"Nuancier des couleurs Matplotlib\" style=\"max-width:100%;height:auto\"></figure>",
+      "code": "import numpy as np\nimport matplotlib.pyplot as plt\nx=np.linspace(0.1,100,10000)\ndef f(x):\n    return np.log(x)\nplt.plot(x,f(x),color='darkorange',label='y=ln(x)')\nplt.legend()\nplt.xlabel('x')\nplt.ylabel('y')\nplt.title('Représentation graphique de la fonction ln(x)')\nplt.show()",
+      "codeCells": [
+        "import numpy as np\nimport matplotlib.pyplot as plt\nx=np.linspace(0.1,100,10000)\ndef f(x):\n    return np.log(x)\nplt.plot(x,f(x),color='darkorange',label='y=ln(x)')\nplt.legend()\nplt.xlabel('x')\nplt.ylabel('y')\nplt.title('Représentation graphique de la fonction ln(x)')\nplt.show()"
+      ],
+      "tryit": "",
+      "practice": {
+        "task": "Remplacez darkorange par navy, puis par seagreen. Réexécutez la cellule après chaque modification.",
+        "expected": "Seule la couleur change ; les valeurs calculées et les axes restent les mêmes."
+      },
+      "cellLabels": [
+        "Complément : appliquer une couleur à la courbe du cours"
+      ]
     },
     {
       "id": "ppt-20",
       "title": "Tracer un histogramme",
       "tp": 3,
-      "goal": "Chapitre I · Diapositive 20",
-      "body": "<p>Tracer un histogramme</p><p>bins : nombre de classes<br>edgecolor : couleur de la bordure<br>color : couleur de la barre</p><p>On veut représenter la distribution statistique d’une valeur centré en 10 avec un écart type de 0,5</p><details><summary>Voir les captures originales (avant relecture)</summary><figure><img src=\"assets/cours-source/s20-0.png\" alt=\"Exemple original de la diapositive 20\" style=\"max-width:100%;height:auto\"></figure></details>",
+      "goal": "Représenter une distribution de valeurs.",
+      "body": "<p>Un histogramme compte les observations dans des intervalles appelés classes. Le code génère 10 000 valeurs de moyenne théorique 10 et d’écart-type 0.5.</p><p><code>bins</code> définit le nombre de classes dans l’intervalle choisi par <code>range</code>. <code>edgecolor</code> et <code>color</code> règlent le contour et le remplissage. L’axe vertical représente ici un effectif, pas une densité de probabilité.</p>",
       "code": "import numpy as np\nimport matplotlib.pyplot as plt\nx=np.random.normal(10,0.5,10000)\nplt.hist(x,bins=100,range=(0,20),edgecolor='k',color='grey')\nplt.xlabel('Valeur')\nplt.ylabel('Effectif')\nplt.title('Distribution normale de moyenne 10 et d’écart-type 0,5')\nplt.show()",
       "codeCells": [
         "import numpy as np\nimport matplotlib.pyplot as plt\nx=np.random.normal(10,0.5,10000)\nplt.hist(x,bins=100,range=(0,20),edgecolor='k',color='grey')\nplt.xlabel('Valeur')\nplt.ylabel('Effectif')\nplt.title('Distribution normale de moyenne 10 et d’écart-type 0,5')\nplt.show()"
       ],
-      "source": "Cours_XLG2CE814_25_26_ChapI.pptx",
-      "sourceSlide": 20,
-      "tryit": ""
+      "tryit": "",
+      "practice": {
+        "task": "Comparez le graphique avec bins=100, puis bins=20, en conservant range=(0,20).",
+        "expected": "Avec moins de classes, les barres sont plus larges et regroupent davantage d’observations."
+      },
+      "cellLabels": [
+        "Représenter des effectifs par classe"
+      ]
     },
     {
       "id": "ppt-21",
       "title": "Tracer un camembert",
       "tp": 3,
-      "goal": "Chapitre I · Diapositive 21",
-      "body": "<p>Tracer un camembert</p><p>On veut représenter la composition de l’air</p><p>Création de trois listes, la première pour les différents paramètres (ici les gaz), la seconde pour leur valeurs (ici le % volumique), la dernière pour indiquer la couleur relative à chacune des variable</p><details><summary>Voir les captures originales du cours</summary><figure><img src=\"assets/cours-source/s21-0.png\" alt=\"Exemple original de la diapositive 21\" style=\"max-width:100%;height:auto\"></figure></details>",
+      "goal": "Représenter les proportions d’un mélange.",
+      "body": "<p>Les trois listes associent les noms des gaz, leur proportion volumique et leur couleur. Les éléments occupant la même position dans ces listes se correspondent.</p><p><code>plt.pie</code> représente les proportions. Les petites fractions peuvent produire des étiquettes rapprochées : un camembert montre bien les espèces majoritaires, mais distingue moins bien les traces.</p>",
       "code": "import matplotlib.pyplot as plt\nelements=['$N_2$','$O_2$','Ar','$CO_2$']\ncomposition=[78.084,20.946,0.934,0.037]\ncouleurs=['blue','lightcoral','gold','green']\nplt.pie(composition,labels=elements,colors=couleurs)\nplt.show()",
       "codeCells": [
         "import matplotlib.pyplot as plt\nelements=['$N_2$','$O_2$','Ar','$CO_2$']\ncomposition=[78.084,20.946,0.934,0.037]\ncouleurs=['blue','lightcoral','gold','green']\nplt.pie(composition,labels=elements,colors=couleurs)\nplt.show()"
       ],
-      "source": "Cours_XLG2CE814_25_26_ChapI.pptx",
-      "sourceSlide": 21,
-      "tryit": ""
+      "tryit": "",
+      "practice": {
+        "task": "Exécutez le graphique puis changez uniquement la première couleur. Identifiez le secteur correspondant.",
+        "expected": "La première position correspond au diazote N₂, qui représente environ 78 % du mélange."
+      },
+      "cellLabels": [
+        "Représenter la composition de l’air"
+      ]
     },
     {
       "id": "ppt-22",
       "title": "Régression polynomiale",
       "tp": 3,
-      "goal": "Chapitre I · Diapositive 22",
-      "body": "<p>Régression polynomiale (avec numpy et polyfit)</p><details><summary>Voir les captures originales du cours</summary><figure><img src=\"assets/cours-source/s22-0.png\" alt=\"Exemple original de la diapositive 22\" style=\"max-width:100%;height:auto\"></figure></details>",
+      "goal": "Ajuster un polynôme à des données.",
+      "body": "<p>Le code construit des données selon y = x<sup>2</sup> − 3.2x + 1.8, puis ajuste un polynôme de degré 2 avec <code>np.polyfit</code>.</p><p>Les coefficients de <code>mod</code> sont rangés de la plus haute puissance au terme constant. La ligne ymodel reconstruit le polynôme. Les points portent le label « experimental » dans l’exemple, mais sont ici des données simulées sans bruit.</p>",
       "code": "import numpy as np\nimport matplotlib.pyplot as plt\n\nx=np.linspace(0,50,100)\ny=x**2-3.2*x+1.8\nplt.scatter(x,y,color='black',label='experimental')\nplt.legend()\nplt.xlabel('x')\nplt.ylabel('f(x)')\n\n\nmod=np.polyfit(x,y,2)\nprint(mod)\n\nymodel=mod[0]*(x**2)+mod[1]*x+mod[2]\nplt.plot(x,ymodel,color='red',label='modelisation')\nplt.legend()\n\nplt.show()",
       "codeCells": [
         "import numpy as np\nimport matplotlib.pyplot as plt\n\nx=np.linspace(0,50,100)\ny=x**2-3.2*x+1.8\nplt.scatter(x,y,color='black',label='experimental')\nplt.legend()\nplt.xlabel('x')\nplt.ylabel('f(x)')\n\n\nmod=np.polyfit(x,y,2)\nprint(mod)\n\nymodel=mod[0]*(x**2)+mod[1]*x+mod[2]\nplt.plot(x,ymodel,color='red',label='modelisation')\nplt.legend()\n\nplt.show()"
       ],
-      "source": "Cours_XLG2CE814_25_26_ChapI.pptx",
-      "sourceSlide": 22,
-      "tryit": ""
+      "tryit": "",
+      "practice": {
+        "task": "Comparez les coefficients affichés aux coefficients utilisés pour construire y. Vérifiez la superposition des points et de la courbe.",
+        "expected": "Les coefficients sont proches de 1, −3.2 et 1.8 ; l’ajustement retrouve la relation utilisée pour générer les données."
+      },
+      "cellLabels": [
+        "Ajuster puis reconstruire un polynôme"
+      ]
     },
     {
       "id": "ppt-23",
       "title": "Régression linéaire",
       "tp": 3,
-      "goal": "Chapitre I · Diapositive 23",
-      "body": "<p>Régression linéaire (avec scipy et linregress)</p><p>La fonction <code>linregress</code> renvoie un objet dont les attributs sont <code>slope</code> (pente), <code>intercept</code> (ordonnée à l’origine), <code>rvalue</code> (coefficient de corrélation), <code>pvalue</code> (valeur p), <code>stderr</code> (erreur-type sur la pente) et <code>intercept_stderr</code> (erreur-type sur l’ordonnée à l’origine). Le coefficient de détermination est R<sup>2</sup> = r<sup>2</sup>.</p><p>L’accès par <code>regression[0]</code> et <code>regression[1]</code>, utilisé dans l’exemple, est conservé. Le déballage historique donne cinq valeurs, pas six.</p><details><summary>Voir les captures originales (avant relecture)</summary><figure><img src=\"assets/cours-source/s23-0.png\" alt=\"Exemple original de la diapositive 23\" style=\"max-width:100%;height:auto\"></figure></details>",
+      "goal": "Déterminer une droite d’ajustement et ses paramètres.",
+      "body": "<p>Les données sont ici simulées avec y = 4x + 2. <code>linregress</code> calcule la pente et l’ordonnée à l’origine. Le code les utilise avec <code>regression[0]</code> et <code>regression[1]</code>.</p><p>Le résultat possède aussi les attributs slope, intercept, rvalue, pvalue, stderr et intercept_stderr. Le coefficient de détermination R<sup>2</sup> est le carré de rvalue. Le déballage historique fournit cinq valeurs, même si l’objet expose ces six attributs.</p>",
       "code": "import numpy as np\nimport matplotlib.pyplot as plt\nfrom scipy.stats import linregress\n\nx=np.linspace(0,50,100)\ny=4*x+2\nplt.scatter(x,y,color='black',label='experimental')\nplt.legend()\nplt.xlabel('x')\nplt.ylabel('f(x)')\n\n\nregression=linregress(x,y)\nymodel = regression[0]*x+regression[1]\nplt.plot(x,ymodel,color='red',label='modelisation')\nplt.legend()\n\nprint(regression)",
       "codeCells": [
         "import numpy as np\nimport matplotlib.pyplot as plt\nfrom scipy.stats import linregress\n\nx=np.linspace(0,50,100)\ny=4*x+2\nplt.scatter(x,y,color='black',label='experimental')\nplt.legend()\nplt.xlabel('x')\nplt.ylabel('f(x)')\n\n\nregression=linregress(x,y)\nymodel = regression[0]*x+regression[1]\nplt.plot(x,ymodel,color='red',label='modelisation')\nplt.legend()\n\nprint(regression)"
       ],
-      "source": "Cours_XLG2CE814_25_26_ChapI.pptx",
-      "sourceSlide": 23,
-      "tryit": ""
+      "tryit": "",
+      "practice": {
+        "task": "Exécutez le code puis affichez regression.rvalue**2 dans une nouvelle cellule. Comparez pente et ordonnée à l’origine à la définition de y.",
+        "expected": "La pente vaut 4, l’ordonnée à l’origine 2 et R² vaut 1 pour ces données parfaitement alignées."
+      },
+      "cellLabels": [
+        "Ajuster une droite et examiner le résultat"
+      ]
     },
     {
       "id": "ppt-24",
       "title": "Les tableaux Pandas",
       "tp": 3,
-      "goal": "Chapitre I · Diapositive 24",
-      "body": "<p>https://pandas.pydata.org/</p><p>Manipulation de données à analyser</p><p>Tableau appelé « dataframes »<br>Colonne : « étiquettes de données » / Ligne : « individus »<br>Présentation lisible de tableau<br>Lecture et écriture de données (à partir d’un fichier tabulé)</p><p>Transformation d’un Ndarray en tableau</p><details><summary>Voir les captures originales du cours</summary><figure><img src=\"assets/cours-source/s24-1.png\" alt=\"Exemple original de la diapositive 24\" style=\"max-width:100%;height:auto\"></figure></details>",
+      "goal": "Organiser des données dans un DataFrame.",
+      "body": "<p>Le code construit un tableau NumPy de neuf valeurs, organisé en trois lignes et trois colonnes, puis le transforme en DataFrame Pandas.</p><p><code>index</code> nomme les lignes et <code>columns</code> nomme les colonnes. L’affichage du DataFrame permet de repérer une valeur par son étiquette plutôt que par sa seule position. La lecture de fichiers est abordée dans l’activité suivante.</p>",
       "code": "#Appel des modules\nimport numpy as np\nimport pandas as pd\n\n#Creation d'un ndarray\narray=np.linspace(0,40,9).reshape(3,3)\nprint('array')\nprint(array)\ndataframe=pd.DataFrame(array,index=['l1','l2','l3'],columns =['c1','c2','c3'])\nprint('dataframe')\nprint(dataframe)",
       "codeCells": [
         "#Appel des modules\nimport numpy as np\nimport pandas as pd\n\n#Creation d'un ndarray\narray=np.linspace(0,40,9).reshape(3,3)\nprint('array')\nprint(array)\ndataframe=pd.DataFrame(array,index=['l1','l2','l3'],columns =['c1','c2','c3'])\nprint('dataframe')\nprint(dataframe)"
       ],
-      "source": "Cours_XLG2CE814_25_26_ChapI.pptx",
-      "sourceSlide": 24,
-      "tryit": ""
+      "tryit": "",
+      "practice": {
+        "task": "Comparez les affichages array et dataframe. Dans une nouvelle cellule, affichez dataframe[\"c2\"].",
+        "expected": "La colonne c2 contient 5, 20 et 35, avec les étiquettes de ligne l1, l2 et l3."
+      },
+      "cellLabels": [
+        "Transformer un tableau NumPy en DataFrame"
+      ]
     },
     {
       "id": "lire-csv",
       "title": "Lire un CSV et sélectionner ses données",
       "tp": 3,
-      "goal": "Complément pédagogique · Préparer les TP",
-      "body": "<p>Un fichier CSV comporte des colonnes séparées par un caractère, généralement une virgule ou un point-virgule. La première cellule crée ici un petit fichier d’entraînement ; en TP, vous utiliserez les données fournies.</p><p>Affichez les premières lignes et les noms des colonnes avant de sélectionner les données. Le nom doit correspondre exactement, espaces et majuscules compris.</p><p>Si votre fichier utilise un point-virgule, ajoutez <code>sep=\";\"</code> à <code>pd.read_csv</code>. Les quatre fichiers du TP3 utilisent une virgule.</p>",
+      "goal": "Importer un fichier, inspecter ses colonnes et sélectionner des données.",
+      "body": "<p>La première cellule prépare un petit fichier d’entraînement. La seconde le lit avec <code>pd.read_csv</code>, inspecte son contenu et sélectionne une colonne puis des lignes.</p><p><code>df.head()</code> affiche les premières lignes ; <code>df.columns</code> affiche les noms exacts des colonnes. Le filtre <code>df[\"temperature_C\"]&gt;22</code> conserve les lignes satisfaisant la condition.</p><p>La virgule est ici le séparateur. Pour un fichier séparé par des points-virgules, utilisez <code>sep=\";\"</code>. Les fichiers du TP3 utilisent une virgule.</p>",
       "codeCells": [
         "# Préparation du fichier d’entraînement\nwith open('mesures_exemple.csv','w',encoding='utf-8') as fichier:\n    fichier.write('temps_s,temperature_C\\n0,20.0\\n10,22.5\\n20,24.0\\n')",
         "import pandas as pd\ndf=pd.read_csv('mesures_exemple.csv')\nprint(df.head())\nprint(df.columns)\nprint(df['temperature_C'])\nprint(df[df['temperature_C']>22])"
@@ -395,94 +499,123 @@
       "code": "# Préparation du fichier d’entraînement\nwith open('mesures_exemple.csv','w',encoding='utf-8') as fichier:\n    fichier.write('temps_s,temperature_C\\n0,20.0\\n10,22.5\\n20,24.0\\n')\n\nimport pandas as pd\ndf=pd.read_csv('mesures_exemple.csv')\nprint(df.head())\nprint(df.columns)\nprint(df['temperature_C'])\nprint(df[df['temperature_C']>22])",
       "tryit": "",
       "cellLabels": [
-        "Exemple complémentaire",
-        "Exemple complémentaire"
-      ]
+        "Préparer le fichier d’entraînement",
+        "Lire, inspecter et filtrer le fichier"
+      ],
+      "practice": {
+        "task": "Exécutez les deux cellules dans l’ordre. Remplacez ensuite le seuil 22 par 23 dans le filtre.",
+        "expected": "Le filtre initial conserve les mesures à 10 s et 20 s. Avec le seuil 23, seule la mesure à 20 s subsiste."
+      }
     },
     {
       "id": "complement-1",
       "title": "Ouverture de fichier (NumPy)",
       "tp": 3,
-      "goal": "Complément Python · Diapositive 1",
-      "body": "<p>Ouverture de fichier (Numpy)</p><p>La fonction numpy.loadtxt permet de lire un fichier texte contenant des données tabulaires. Elle crée un tableau ndarray contenant ces données.<br>Par exemple, le tableau enregistré dans le fichier créé ci-dessus pourra être récupéré par :<br>B = np.loadtxt(&quot;tableau.txt&quot;,skiprows=1)<br>Le paramètre skiprows indique le nombre de lignes à sauter avant de lire le tableau (ici une ligne contenant la légende des colonnes). Le tableau obtenu est identique au tableau d’origine.<br>Il peut être intéressant de récupérer directement les colonnes du fichier sous la formes de tableaux à une dimension :<br>X,Y1,Y2 = np.loadtxt(&quot;tableau.txt&quot;,skiprows=1,unpack=True)<br>Bien sûr, cette fonction peut être utilisée pour lire les fichiers CSV produits par un autre logiciel, par exemple un logiciel d’acquisition de données.</p><aside><strong>Repère</strong><p>Les cellules de préparation sont ajoutées pour permettre l’exécution dans un espace neuf. Les fragments du support suivent ces cellules.</p></aside>",
-      "code": "# Préparation ajoutée pour rendre l’exemple autonome\nimport numpy as np\nx = np.linspace(0, 2*np.pi, 100)\nB = np.column_stack((x, np.sin(x), np.cos(x)))\nnp.savetxt(\"tableau.txt\",B,header=\"x sin cos\")\n\nB = np.loadtxt(\"tableau.txt\",skiprows=1)\n\nX,Y1,Y2 = np.loadtxt(\"tableau.txt\",skiprows=1,unpack=True)",
+      "goal": "Lire un tableau de données avec NumPy.",
+      "body": "<p>La première cellule prépare le fichier texte pour cet exercice. <code>np.loadtxt</code> le relit sous forme de tableau. <code>skiprows=1</code> ignore sa première ligne, qui décrit les colonnes.</p><p>Avec <code>unpack=True</code>, les trois colonnes sont affectées à X, Y1 et Y2. La dernière cellule affiche les données relues pour vérifier le résultat.</p>",
+      "code": "# Préparation ajoutée pour rendre l’exemple autonome\nimport numpy as np\nx = np.linspace(0, 2*np.pi, 100)\nB = np.column_stack((x, np.sin(x), np.cos(x)))\nnp.savetxt(\"tableau.txt\",B,header=\"x sin cos\")\n\nB = np.loadtxt(\"tableau.txt\",skiprows=1)\n\nX,Y1,Y2 = np.loadtxt(\"tableau.txt\",skiprows=1,unpack=True)\n\n# Observation complémentaire des données relues\nprint(B.shape)\nprint(B[:3])\nprint(X[:3])\nprint(Y1[:3])\nprint(Y2[:3])",
       "codeCells": [
         "# Préparation ajoutée pour rendre l’exemple autonome\nimport numpy as np\nx = np.linspace(0, 2*np.pi, 100)\nB = np.column_stack((x, np.sin(x), np.cos(x)))\nnp.savetxt(\"tableau.txt\",B,header=\"x sin cos\")",
         "B = np.loadtxt(\"tableau.txt\",skiprows=1)",
-        "X,Y1,Y2 = np.loadtxt(\"tableau.txt\",skiprows=1,unpack=True)"
+        "X,Y1,Y2 = np.loadtxt(\"tableau.txt\",skiprows=1,unpack=True)",
+        "# Observation complémentaire des données relues\nprint(B.shape)\nprint(B[:3])\nprint(X[:3])\nprint(Y1[:3])\nprint(Y2[:3])"
       ],
-      "source": "Complément Python.pptx",
-      "sourceSlide": 1,
       "tryit": "",
       "cellLabels": [
-        "Préparation ajoutée",
-        "Code du support",
-        "Code du support"
-      ]
+        "Préparer le fichier",
+        "Lire le tableau",
+        "Lire les colonnes séparément",
+        "Complément : vérifier les données relues"
+      ],
+      "practice": {
+        "task": "Exécutez les cellules dans l’ordre. Comparez les trois premières lignes de B avec les premiers éléments de X, Y1 et Y2.",
+        "expected": "B contient 100 lignes et 3 colonnes ; X, Y1 et Y2 correspondent respectivement à x, sin(x) et cos(x)."
+      }
     },
     {
       "id": "complement-2",
       "title": "Sauvegarde de fichier (NumPy)",
       "tp": 3,
-      "goal": "Complément Python · Diapositive 2",
-      "body": "<p>La fonction numpy.savetxt permet d’enregistrer le contenu d’un tableau sous forme de fichier texte. Par exemple, le tableau précédent (comportant 3 colonnes) peut être enregistré par :<br>np.savetxt(&quot;tableau.txt&quot;,B,header=&quot;x sin cos&quot;)<br>Voici les 4 premières lignes du fichier obtenu<br># x sin cos<br>0.000000000000000000e+00 0.000000000000000000e+00 1.000000000000000000e+00<br>6.346651825433925753e-02 6.342391965656450636e-02 9.979866764718844374e-01<br>1.269330365086785151e-01 1.265924535737492640e-01 9.919548128307953405e-01<br>La première ligne, introduite par le paramètre optionel header, donne une information sur la signification des colonnes. À chaque ligne du tableau correspond une ligne dans le fichier. Par défaut, les nombres sont séparés par des espaces. On parle aussi de fichier CSV (comma separated values) même si le séparateur n’est pas une virgule. On peut d’ailleurs donner l’extension .csv au fichier, ce qui permet aux logiciels tableurs de le reconnaître automatiquement comme un fichier contenant un tableau.</p><p>Sauvegarde de fichier (Numpy)</p><aside><strong>Repère</strong><p>Les cellules de préparation sont ajoutées pour permettre l’exécution dans un espace neuf. Les fragments du support suivent ces cellules.</p></aside>",
-      "code": "# Préparation ajoutée pour rendre l’exemple autonome\nimport numpy as np\nx = np.linspace(0, 2*np.pi, 100)\nB = np.column_stack((x, np.sin(x), np.cos(x)))\n\nnp.savetxt(\"tableau.txt\",B,header=\"x sin cos\")",
+      "goal": "Enregistrer un tableau dans un fichier texte.",
+      "body": "<p>Après la préparation du tableau B, <code>np.savetxt</code> écrit ses trois colonnes dans tableau.txt. Le paramètre <code>header</code> fournit une ligne d’en-tête précédée par défaut de #.</p><p>Sans paramètre delimiter, les valeurs sont séparées par des espaces. Renommer le fichier en .csv ne change pas son séparateur. La dernière cellule relit les premières lignes du fichier créé pour vérifier l’écriture.</p><p>Dans Basthon, ce fichier se trouve dans l’espace de fichiers de Python ; l’écriture ne déclenche pas à elle seule un téléchargement sur votre ordinateur.</p>",
+      "code": "# Préparation ajoutée pour rendre l’exemple autonome\nimport numpy as np\nx = np.linspace(0, 2*np.pi, 100)\nB = np.column_stack((x, np.sin(x), np.cos(x)))\n\nnp.savetxt(\"tableau.txt\",B,header=\"x sin cos\")\n\n# Observation complémentaire du fichier créé\nwith open(\"tableau.txt\",encoding=\"utf-8\") as fichier:\n    for i in range(4):\n        print(fichier.readline().rstrip())",
       "codeCells": [
         "# Préparation ajoutée pour rendre l’exemple autonome\nimport numpy as np\nx = np.linspace(0, 2*np.pi, 100)\nB = np.column_stack((x, np.sin(x), np.cos(x)))",
-        "np.savetxt(\"tableau.txt\",B,header=\"x sin cos\")"
+        "np.savetxt(\"tableau.txt\",B,header=\"x sin cos\")",
+        "# Observation complémentaire du fichier créé\nwith open(\"tableau.txt\",encoding=\"utf-8\") as fichier:\n    for i in range(4):\n        print(fichier.readline().rstrip())"
       ],
-      "source": "Complément Python.pptx",
-      "sourceSlide": 2,
       "tryit": "",
       "cellLabels": [
-        "Préparation ajoutée",
-        "Code du support"
-      ]
+        "Préparer le tableau",
+        "Écrire le fichier",
+        "Complément : vérifier les lignes écrites"
+      ],
+      "practice": {
+        "task": "Exécutez les trois cellules. Identifiez la ligne d’en-tête et les trois colonnes numériques.",
+        "expected": "La première ligne est # x sin cos. Les lignes suivantes contiennent les valeurs numériques écrites par savetxt."
+      }
     },
     {
       "id": "complement-3",
-      "title": "Statistique",
+      "title": "Loi normale et dispersion des mesures",
       "tp": 3,
-      "goal": "Complément Python · Diapositive 3",
-      "body": "<p>Statistique</p><p>Il existe aussi une fonction numpy.random.random, qui fournit des nombres dans l’intervalle [0,1[<br>(ouvert à droite). Cette fonction est similaire à la fonction du même nom du module random de la bibliothèque standard.<br>La loi normale (ou loi de Gauss) pour une variable aléatoire d’espérance μ et d’écart-type σ est définie par la densité de probabilité suivante :<br>p(x) = [1 / (σ√(2π))] exp[−(x−μ)² / (2σ²)]<br>Pour cette distribution, la variable peut prendre en principe toute valeur réelle (intervalle non borné) mais la probabilité d’obtenir une valeur en dehors de l’intervalle [μ−5σ,μ+5σ]<br>est extrêmement faible. Voici une représentation graphique de la densité sur cet intervalle :<br><br>Une des utilisations de la loi normale est la simulation des mesures physiques. En effet, les multiples mesures d’une grandeur physique sont très souvent distribuées suivant une loi normale. L’écart-type σ caractérise la dispersion des mesures individuelles. Pour la moyenne de n mesures indépendantes, l’incertitude-type liée à la répétabilité est estimée par s/√n, où s est l’écart-type expérimental.<br>Notons que l’intervalle [μ−σ,μ+σ]<br>correspond à une probabilité de 68 % (intervalle de confiance de 68 %). L’intervalle [μ−2σ,μ+2σ]<br>correspond à une probabilité de 95 %.<br><br></p>",
-      "code": "",
-      "codeCells": [],
-      "source": "Complément Python.pptx",
-      "sourceSlide": 3,
-      "tryit": ""
+      "goal": "Comprendre la distribution normale et la dispersion des mesures.",
+      "body": "<p>Une loi normale est décrite par sa moyenne μ et son écart-type σ. Sa densité vaut p(x) = exp[−(x−μ)<sup>2</sup>/(2σ<sup>2</sup>)] / (σ√(2π)).</p><p>Le code compare un histogramme normalisé avec density=True à cette densité théorique. Il distingue la dispersion des mesures, estimée par s, et l’incertitude-type de leur moyenne liée à la répétabilité, estimée par s/√N pour des mesures indépendantes.</p><p>Environ 68 % des valeurs d’une loi normale se trouvent entre μ−σ et μ+σ. Il s’agit de la proportion des valeurs individuelles, pas d’un intervalle de confiance de la moyenne. Le code estime cette proportion sur l’échantillon.</p>",
+      "code": "# Exemple complémentaire : simuler des mesures et décrire leur dispersion\nimport numpy as np\nimport matplotlib.pyplot as plt\nmu=10.0\nsigma=0.5\nN=10000\na=np.random.normal(mu,sigma,N)\nm=a.mean()\ns=a.std(ddof=1)\nu_m=s/np.sqrt(N)\nprint('Moyenne :',m)\nprint('Écart-type expérimental :',s)\nprint('Incertitude-type de la moyenne :',u_m)\nprint('Fraction à moins de sigma de mu :',np.mean(np.abs(a-mu)<=sigma))\nx=np.linspace(mu-5*sigma,mu+5*sigma,500)\np=np.exp(-0.5*((x-mu)/sigma)**2)/(sigma*np.sqrt(2*np.pi))\nplt.hist(a,bins=50,density=True,label='Mesures simulées')\nplt.plot(x,p,label='Densité normale')\nplt.xlabel('Valeur mesurée')\nplt.ylabel('Densité de probabilité')\nplt.legend()\nplt.show()",
+      "codeCells": [
+        "# Exemple complémentaire : simuler des mesures et décrire leur dispersion\nimport numpy as np\nimport matplotlib.pyplot as plt\nmu=10.0\nsigma=0.5\nN=10000\na=np.random.normal(mu,sigma,N)\nm=a.mean()\ns=a.std(ddof=1)\nu_m=s/np.sqrt(N)\nprint('Moyenne :',m)\nprint('Écart-type expérimental :',s)\nprint('Incertitude-type de la moyenne :',u_m)\nprint('Fraction à moins de sigma de mu :',np.mean(np.abs(a-mu)<=sigma))\nx=np.linspace(mu-5*sigma,mu+5*sigma,500)\np=np.exp(-0.5*((x-mu)/sigma)**2)/(sigma*np.sqrt(2*np.pi))\nplt.hist(a,bins=50,density=True,label='Mesures simulées')\nplt.plot(x,p,label='Densité normale')\nplt.xlabel('Valeur mesurée')\nplt.ylabel('Densité de probabilité')\nplt.legend()\nplt.show()"
+      ],
+      "tryit": "",
+      "practice": {
+        "task": "Exécutez la cellule puis remplacez N=10000 par N=100. Comparez s et u_m.",
+        "expected": "La dispersion reste proche de 0.5 ; l’incertitude de la moyenne augmente quand le nombre de mesures diminue. La proportion dans μ±σ fluctue autour de 0.68."
+      },
+      "cellLabels": [
+        "Complément : comparer dispersion, moyenne et densité"
+      ]
     },
     {
       "id": "complement-4",
       "title": "Suppression de colonnes (Pandas)",
       "tp": 3,
-      "goal": "Complément Python · Diapositive 4",
-      "body": "<p>#drop one column by name<br>df.drop(&#x27;column_name&#x27;, axis=1, inplace=True)<br> <br>#drop multiple columns by name<br>df.drop([&#x27;column_name1&#x27;, &#x27;column_name2&#x27;], axis=1, inplace=True)<br> <br>#drop one column by index<br>df.drop(df.columns[[0]], axis=1, inplace=True)<br> <br>#drop multiple columns by index<br>df.drop(df.columns[[0,2,5]], axis=1, inplace=True)<br> </p><p>Pandas</p><aside><strong>Repère</strong><p>Les cellules de préparation sont ajoutées pour permettre l’exécution dans un espace neuf. Les fragments du support suivent ces cellules.</p></aside>",
-      "code": "# Préparation ajoutée : tableau de démonstration\nimport pandas as pd\ndf_initial = pd.DataFrame([[1,2,3,4,5,6]], columns=['column_name','column_name1','column_name2','d','e','f'])\n\n# Préparation ajoutée : repartir du tableau initial\ndf = df_initial.copy()\n\n#drop one column by name\ndf.drop('column_name', axis=1, inplace=True)\n\n# Préparation ajoutée : repartir du tableau initial\ndf = df_initial.copy()\n\n#drop multiple columns by name\ndf.drop(['column_name1', 'column_name2'], axis=1, inplace=True)\n\n# Préparation ajoutée : repartir du tableau initial\ndf = df_initial.copy()\n\n#drop one column by index\ndf.drop(df.columns[[0]], axis=1, inplace=True)\n\n# Préparation ajoutée : repartir du tableau initial\ndf = df_initial.copy()\n\n#drop multiple columns by index\ndf.drop(df.columns[[0,2,5]], axis=1, inplace=True)",
+      "goal": "Supprimer des colonnes par leur nom ou leur position.",
+      "body": "<p><code>df.drop</code> supprime une ligne ou une colonne. Ici, <code>axis=1</code> désigne les colonnes et <code>inplace=True</code> modifie directement df.</p><p>Les quatre exemples utilisent soit les noms de colonnes, soit leurs positions dans <code>df.columns</code>. Chaque essai repart d’une copie du même tableau afin que les suppressions précédentes n’affectent pas le suivant. Une cellule d’observation affiche les colonnes restantes après chaque suppression.</p>",
+      "code": "# Préparation ajoutée : tableau de démonstration\nimport pandas as pd\ndf_initial = pd.DataFrame([[1,2,3,4,5,6]], columns=['column_name','column_name1','column_name2','d','e','f'])\n\n# Préparation ajoutée : repartir du tableau initial\ndf = df_initial.copy()\n\n#drop one column by name\ndf.drop('column_name', axis=1, inplace=True)\n\n# Observation complémentaire après suppression\nprint(df.columns.tolist())\nprint(df)\n\n# Préparation ajoutée : repartir du tableau initial\ndf = df_initial.copy()\n\n#drop multiple columns by name\ndf.drop(['column_name1', 'column_name2'], axis=1, inplace=True)\n\n# Observation complémentaire après suppression\nprint(df.columns.tolist())\nprint(df)\n\n# Préparation ajoutée : repartir du tableau initial\ndf = df_initial.copy()\n\n#drop one column by index\ndf.drop(df.columns[[0]], axis=1, inplace=True)\n\n# Observation complémentaire après suppression\nprint(df.columns.tolist())\nprint(df)\n\n# Préparation ajoutée : repartir du tableau initial\ndf = df_initial.copy()\n\n#drop multiple columns by index\ndf.drop(df.columns[[0,2,5]], axis=1, inplace=True)\n\n# Observation complémentaire après suppression\nprint(df.columns.tolist())\nprint(df)",
       "codeCells": [
         "# Préparation ajoutée : tableau de démonstration\nimport pandas as pd\ndf_initial = pd.DataFrame([[1,2,3,4,5,6]], columns=['column_name','column_name1','column_name2','d','e','f'])",
         "# Préparation ajoutée : repartir du tableau initial\ndf = df_initial.copy()",
         "#drop one column by name\ndf.drop('column_name', axis=1, inplace=True)",
+        "# Observation complémentaire après suppression\nprint(df.columns.tolist())\nprint(df)",
         "# Préparation ajoutée : repartir du tableau initial\ndf = df_initial.copy()",
         "#drop multiple columns by name\ndf.drop(['column_name1', 'column_name2'], axis=1, inplace=True)",
+        "# Observation complémentaire après suppression\nprint(df.columns.tolist())\nprint(df)",
         "# Préparation ajoutée : repartir du tableau initial\ndf = df_initial.copy()",
         "#drop one column by index\ndf.drop(df.columns[[0]], axis=1, inplace=True)",
+        "# Observation complémentaire après suppression\nprint(df.columns.tolist())\nprint(df)",
         "# Préparation ajoutée : repartir du tableau initial\ndf = df_initial.copy()",
-        "#drop multiple columns by index\ndf.drop(df.columns[[0,2,5]], axis=1, inplace=True)"
+        "#drop multiple columns by index\ndf.drop(df.columns[[0,2,5]], axis=1, inplace=True)",
+        "# Observation complémentaire après suppression\nprint(df.columns.tolist())\nprint(df)"
       ],
-      "source": "Complément Python.pptx",
-      "sourceSlide": 4,
       "tryit": "",
       "cellLabels": [
-        "Préparation ajoutée",
-        "Préparation ajoutée",
-        "Code du support",
-        "Préparation ajoutée",
-        "Code du support",
-        "Préparation ajoutée",
-        "Code du support",
-        "Préparation ajoutée",
-        "Code du support"
-      ]
+        "Préparation",
+        "Préparation",
+        "Exemple",
+        "Complément : observer les colonnes restantes",
+        "Préparation",
+        "Exemple",
+        "Complément : observer les colonnes restantes",
+        "Préparation",
+        "Exemple",
+        "Complément : observer les colonnes restantes",
+        "Préparation",
+        "Exemple",
+        "Complément : observer les colonnes restantes"
+      ],
+      "practice": {
+        "task": "Pour chacun des quatre essais, exécutez la préparation, la suppression et l’observation. Comparez une sélection par nom et une sélection par position.",
+        "expected": "Les noms spécifiés disparaissent du tableau. Les positions 0, 2 et 5 correspondent aux première, troisième et sixième colonnes du tableau initial."
+      }
     }
   ]
 }

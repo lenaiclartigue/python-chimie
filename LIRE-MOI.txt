@@ -1,0 +1,7 @@
+Remplacer index.html, app.js et content.json à la racine du dépôt, puis Commit et Push origin. Conserver tous les autres fichiers : cette mise à jour complète les précédentes et ne change ni Basthon, ni les TP.
+
+Les notebooks déjà enregistrés ne sont pas écrasés. Un message indique désormais lorsqu’une activité sauvegardée est antérieure à la nouvelle version. Télécharger ses essais puis cliquer sur « Restaurer les cellules du cours » pour charger les nouvelles cellules.
+
+L’activité « Diagnostiquer et corriger un NameError » comporte volontairement une cellule incorrecte. Le message d’erreur constitue l’objet de l’exercice ; l’étudiant doit corriger le nom de variable. Ce n’est pas une panne de Python.
+
+Le fichier VERIFICATION-ACTIVITES.md détaille les 28 activités pour l’enseignant ; il n’est pas nécessaire de le publier.
