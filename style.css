@@ -11,3 +11,7 @@
 
 /* Notations scientifiques : hauteur de ligne stable et caractères lisibles. */
 .source-text sub,.source-text sup,#page p sub,#page p sup{font-size:.75em;line-height:0;position:relative;vertical-align:baseline}.source-text sup,#page p sup{top:-.5em}.source-text sub,#page p sub{bottom:-.2em}
+
+.course-introduction{max-width:920px;margin:0 0 36px;padding:0 0 22px;border-bottom:1px solid var(--line)}.course-introduction h2{font-size:26px;margin-top:0}.course-introduction p{color:var(--muted);font-size:16px;line-height:1.8}.course-introduction strong{color:var(--ink)}.home-footer{display:block}.home-footer .home-links{flex-direction:row;flex-wrap:wrap;justify-content:space-between;gap:15px}.cover{padding-bottom:20px}
+
+.tp-notes{margin:20px 0;padding:16px;border:1px solid var(--line);border-radius:12px;background:var(--paper,#fff)}.tp-notes summary{font-weight:700;cursor:pointer}.tp-notes textarea{width:100%;min-height:220px;resize:vertical;box-sizing:border-box;font:inherit;line-height:1.6}.tp-notes small,.tp-notes #tp-notes-status{color:var(--muted);font-size:13px}.tp-notes .actions{flex-wrap:wrap}

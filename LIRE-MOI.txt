@@ -1,10 +1,10 @@
-MISE À JOUR — CACHE DU SITE
+Remplacer index.html, app.js et style.css à la racine du dépôt python-chimie.
+Faire Commit puis Push origin ; attendre la fin du déploiement, puis Ctrl+F5.
 
-Remplacer index.html et app.js à la racine du dépôt python-chimie.
-Faire Commit puis Push origin dans GitHub Desktop et attendre la fin du déploiement GitHub Pages.
-Recharger ensuite une première fois avec Ctrl+F5 (ou Cmd+Maj+R sur Mac).
+Chaque TP dispose d’un panneau repliable « Mes notes », commun à ses exercices.
+Les notes sont enregistrées automatiquement dans ce navigateur et peuvent être téléchargées en TP1-notes.txt, TP2-notes.txt ou TP3-notes.txt, puis rouvertes.
+Le bloc Observations vide des TP est retiré au chargement. Toute cellule modifiée par un étudiant est conservée.
+Les notes ne sont pas incluses dans le notebook : télécharger les deux fichiers pour garder code et notes.
+Le correctif de cache précédent est inclus. Aucun changement du dossier Basthon.
 
-À chaque rechargement de page, les fichiers de présentation sont demandés avec une nouvelle URL et les contenus du cours et des exercices sont revérifiés auprès du serveur.
-La version de Basthon reste inchangée. Les notebooks et fichiers des étudiants sont conservés.
-Un notebook sauvegardé peut donc encore contenir un ancien exemple : télécharger ses essais puis choisir « Restaurer les cellules du cours » pour récupérer les nouvelles cellules.
-Les mises à jour ne remplacent pas une page déjà ouverte : il faut la recharger.
+Vérification : syntaxe JavaScript et tests des notes (isolation par TP, sauvegarde, export/import, échec de stockage, conservation des réponses existantes). Affichage non vérifié dans un navigateur.
