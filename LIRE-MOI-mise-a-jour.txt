@@ -1,0 +1,11 @@
+MISE À JOUR DU SITE PYTHON POUR LA CHIMIE
+
+Cette archive contient uniquement les fichiers à ajouter ou remplacer dans votre dépôt existant. Ne supprimez pas le dossier basthon ni les autres fichiers assets. Aucun changement de Basthon n’est nécessaire.
+
+Remplacer index.html, app.js et style.css à la racine. Ajouter les trois fichiers TP1-exercices.json, TP2-exercices.json et TP3-exercices.json dans assets.
+
+Avec GitHub Desktop : copier ces fichiers dans la copie locale du dépôt, puis Commit et Push origin. Les notebooks déjà sauvegardés dans le navigateur conservent les mêmes identifiants par cours et par TP.
+
+Changements : accueil avec cartes Cours/TP/Projets ; cours et TP côte à côte ; TP découpés par exercice avec navigation ; suppression des choix d’affichage, du mode d’emploi, du lien PDF et des précisions de transcription ; contact inspiré de Thermochimie ; ressources avec guides détaillés. Sur petit écran, les deux panneaux restent présents l’un sous l’autre.
+
+Vérifications : syntaxe JavaScript, intégrité des sections d’exercices, chemins locaux, maintien des identifiants de sauvegarde. Aucun test en navigateur effectué ici. Après publication, vérifier la navigation, l’exécution Python et le retour au travail enregistré.
