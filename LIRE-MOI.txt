@@ -1,13 +1,1 @@
-Mise à jour de l’en-tête et du pied de page — 22 octobre 2026
-
-À appliquer après la version FR / EN.
-Remplacer index.html, site-common.js et style.css à la racine du dépôt.
-Ajouter assets/images/nantes-universite.png en conservant les autres fichiers du dossier assets.
-Faire Commit, puis Push origin ; attendre le déploiement, puis Ctrl+F5.
-
-FR / EN séparés par une barre oblique.
-En-tête : logo Nantes Université cliquable ; retrait des deux sous-titres et du lien de licence redondant.
-Pied de page : titre lié à l’accueil ; Conception : Lénaïc Lartigue ouvre une fenêtre avec les cinq références demandées ; Mesure d’audience sous Partage et citation ; Contact conservé uniquement dans le menu du haut.
-Modifications communes aux versions française et anglaise.
-Logo identique à celui utilisé sur NanoBioMat, sans modification de proportions.
-Vérification : syntaxe JavaScript, affichage dans un navigateur et fenêtre Conception.
+Remplacer style.css dans le dépôt python-chimie après la dernière mise à jour de l’en-tête. Commit puis Push origin. Le logo Nantes Université est centré ; la navigation passe à la ligne sur les écrans plus étroits. Aucun autre fichier à remplacer.
