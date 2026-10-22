@@ -1,0 +1,5 @@
+Python pour la chimie — correctif v1.2
+Copier les cinq fichiers à la racine du dépôt python-chimie en remplaçant les fichiers existants, puis Commit et Push origin dans GitHub Desktop.
+Ne pas supprimer les autres fichiers. Basthon ne change pas.
+Modifications : cartes d’accueil harmonisées, ressources sélectionnables et quatre nouveaux sites d’activités, logo Nantes Université centré en pied de page et navigation centrée en haut. FR et EN.
+Archive complète correspondante : python-chimie-complet-v1.2.zip
