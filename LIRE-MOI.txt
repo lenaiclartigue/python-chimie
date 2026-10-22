@@ -1,10 +1,13 @@
-Remplacer index.html, app.js et style.css à la racine du dépôt python-chimie.
-Faire Commit puis Push origin ; attendre la fin du déploiement, puis Ctrl+F5.
+Mise à jour de l’en-tête et du pied de page — 22 octobre 2026
 
-Chaque TP dispose d’un panneau repliable « Mes notes », commun à ses exercices.
-Les notes sont enregistrées automatiquement dans ce navigateur et peuvent être téléchargées en TP1-notes.txt, TP2-notes.txt ou TP3-notes.txt, puis rouvertes.
-Le bloc Observations vide des TP est retiré au chargement. Toute cellule modifiée par un étudiant est conservée.
-Les notes ne sont pas incluses dans le notebook : télécharger les deux fichiers pour garder code et notes.
-Le correctif de cache précédent est inclus. Aucun changement du dossier Basthon.
+À appliquer après la version FR / EN.
+Remplacer index.html, site-common.js et style.css à la racine du dépôt.
+Ajouter assets/images/nantes-universite.png en conservant les autres fichiers du dossier assets.
+Faire Commit, puis Push origin ; attendre le déploiement, puis Ctrl+F5.
 
-Vérification : syntaxe JavaScript et tests des notes (isolation par TP, sauvegarde, export/import, échec de stockage, conservation des réponses existantes). Affichage non vérifié dans un navigateur.
+FR / EN séparés par une barre oblique.
+En-tête : logo Nantes Université cliquable ; retrait des deux sous-titres et du lien de licence redondant.
+Pied de page : titre lié à l’accueil ; Conception : Lénaïc Lartigue ouvre une fenêtre avec les cinq références demandées ; Mesure d’audience sous Partage et citation ; Contact conservé uniquement dans le menu du haut.
+Modifications communes aux versions française et anglaise.
+Logo identique à celui utilisé sur NanoBioMat, sans modification de proportions.
+Vérification : syntaxe JavaScript, affichage dans un navigateur et fenêtre Conception.

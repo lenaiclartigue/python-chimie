@@ -35,3 +35,14 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid var
 @media(max-width:1000px){header>nav{order:3;width:100%;justify-content:center}.language-switch{margin-left:auto}.teaching-footer{padding:10px 20px;gap:12px}.footer-links{gap:12px}}
 @media(max-width:760px){body{height:auto;min-height:100dvh;display:block;overflow:auto}header>nav{justify-content:flex-start}#layout,body.reading #layout{display:grid;height:auto;min-height:0}#reading{max-height:65dvh}body.reading #reading{max-height:none;overflow:visible}.teaching-footer{display:flex;flex-direction:column;align-items:flex-start;padding:18px 20px}.footer-identity{column-gap:12px}.footer-links{justify-content:flex-start;gap:20px}.teaching-dialog{padding:24px}.teaching-dialog h2{font-size:24px}}
 @media print{body{display:block;height:auto;overflow:visible}.teaching-footer,.language-switch,.teaching-dialog{display:none!important}#reading,body.reading #reading{overflow:visible;max-height:none}}
+
+/* October 2026: harmonised header and footer links. */
+.university-logo{display:flex;align-items:center;flex-shrink:0;margin-right:6px}.university-logo img{display:block;width:150px;height:auto;max-height:56px;object-fit:contain}
+.language-separator{color:var(--muted);font-size:16px;padding:0 2px}
+.footer-home{text-decoration:none;color:var(--ink)}.footer-home:hover{text-decoration:underline}
+.footer-identity .design-credit{grid-column:1;justify-self:start;text-align:left;border:0;border-radius:0;background:none;padding:0;color:var(--muted);font-size:12px;font-weight:400;line-height:1.6;text-decoration:underline;text-underline-offset:3px}
+.footer-identity .design-credit:hover{color:var(--teal)}
+.footer-links{flex-direction:column;align-items:flex-start;gap:2px}.footer-links button{padding:0;line-height:1.8}
+.design-references{padding-left:22px}.design-references li{margin:12px 0;font-size:15px;line-height:1.7}
+@media(max-width:1100px){header>nav{order:3;width:100%;justify-content:center}.language-switch{margin-left:auto}}
+@media(max-width:760px){.university-logo img{width:115px}.university-logo{margin-right:0}header{column-gap:12px}.brand{font-size:13px}.mark{font-size:17px;padding:5px 8px}.mark span{font-size:11px}header>nav{justify-content:flex-start}.language-switch{gap:0}.language-switch a{min-width:36px}.footer-links{align-items:flex-start;gap:2px}}
