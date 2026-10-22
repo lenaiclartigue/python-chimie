@@ -15,3 +15,23 @@
 .course-introduction{max-width:920px;margin:0 0 36px;padding:0 0 22px;border-bottom:1px solid var(--line)}.course-introduction h2{font-size:26px;margin-top:0}.course-introduction p{color:var(--muted);font-size:16px;line-height:1.8}.course-introduction strong{color:var(--ink)}.home-footer{display:block}.home-footer .home-links{flex-direction:row;flex-wrap:wrap;justify-content:space-between;gap:15px}.cover{padding-bottom:20px}
 
 .tp-notes{margin:20px 0;padding:16px;border:1px solid var(--line);border-radius:12px;background:var(--paper,#fff)}.tp-notes summary{font-weight:700;cursor:pointer}.tp-notes textarea{width:100%;min-height:220px;resize:vertical;box-sizing:border-box;font:inherit;line-height:1.6}.tp-notes small,.tp-notes #tp-notes-status{color:var(--muted);font-size:13px}.tp-notes .actions{flex-wrap:wrap}
+
+/* Shared teaching-site chrome: language and compact footer, keeping Python visible. */
+body{height:100dvh;display:flex;flex-direction:column;overflow:hidden}
+header{flex-shrink:0;height:auto;min-height:88px;flex-wrap:wrap;padding-block:12px;gap:12px}
+header>nav{margin-left:auto;flex-wrap:wrap}
+.utility{flex-shrink:0}
+.language-switch{display:flex;align-items:center;gap:4px;flex-shrink:0;font-size:13px}
+.language-switch a{display:grid;place-items:center;min-width:44px;min-height:44px;padding:5px;text-decoration:none;border-radius:6px;color:var(--ink);font-weight:650}
+.language-switch a[aria-current]{background:#183c53;color:white}
+.language-switch a:hover{box-shadow:inset 0 0 0 2px var(--teal)}
+a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid var(--teal);outline-offset:3px}
+#layout,body.reading #layout{width:100%;flex:1;min-height:0;height:auto}
+#reading,body.reading #reading{overflow:auto}
+.teaching-footer{flex-shrink:0;display:flex;align-items:center;justify-content:space-between;gap:18px;margin:0;padding:12px 30px;border-top:1px solid var(--line);background:var(--paper);font-size:12px;color:var(--muted)}
+.footer-identity{display:grid;grid-template-columns:auto auto;column-gap:16px;align-items:center;line-height:1.6}.footer-identity strong{color:var(--ink)}.footer-identity span{grid-column:1}.footer-license{grid-column:2;grid-row:1/3;display:block;height:31px}.footer-license img{display:block}
+.footer-links{display:flex;align-items:center;justify-content:flex-end;gap:20px;flex-wrap:wrap}.footer-links button,.footer-links a{border:0;border-radius:0;background:transparent;padding:4px 0;color:var(--ink);font-size:13px;font-weight:450;text-decoration:underline;text-underline-offset:4px}.footer-links button:hover,.footer-links a:hover{color:var(--teal)}
+.teaching-dialog{width:min(720px,calc(100% - 32px));max-height:85dvh;overflow:auto;border:1px solid var(--line);border-radius:12px;padding:32px;background:var(--paper);color:var(--ink);box-shadow:0 20px 70px #132d3e40}.teaching-dialog::backdrop{background:#172e4277}.teaching-dialog h2{padding-right:35px;font-size:28px;line-height:1.25;margin:0 0 24px}.teaching-dialog h3{font-size:18px;margin:22px 0 10px}.teaching-dialog p{font-size:15px;line-height:1.7;overflow-wrap:anywhere}.dialog-close{float:right;position:sticky;top:0;font-size:24px;line-height:1;min-width:40px;min-height:40px}.dialog-actions{margin-top:24px}
+@media(max-width:1000px){header>nav{order:3;width:100%;justify-content:center}.language-switch{margin-left:auto}.teaching-footer{padding:10px 20px;gap:12px}.footer-links{gap:12px}}
+@media(max-width:760px){body{height:auto;min-height:100dvh;display:block;overflow:auto}header>nav{justify-content:flex-start}#layout,body.reading #layout{display:grid;height:auto;min-height:0}#reading{max-height:65dvh}body.reading #reading{max-height:none;overflow:visible}.teaching-footer{display:flex;flex-direction:column;align-items:flex-start;padding:18px 20px}.footer-identity{column-gap:12px}.footer-links{justify-content:flex-start;gap:20px}.teaching-dialog{padding:24px}.teaching-dialog h2{font-size:24px}}
+@media print{body{display:block;height:auto;overflow:visible}.teaching-footer,.language-switch,.teaching-dialog{display:none!important}#reading,body.reading #reading{overflow:visible;max-height:none}}

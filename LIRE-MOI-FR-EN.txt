@@ -1,0 +1,48 @@
+PYTHON POUR LA CHIMIE — FR / EN ET HARMONISATION
+Mise à jour du 21 octobre 2026
+
+INSTALLATION
+1. Décompresser l’archive.
+2. Copier son contenu dans le dossier du dépôt python-chimie, en fusionnant le dossier assets et en remplaçant les fichiers proposés. Ne pas remplacer le dossier assets entier : conserver ses autres fichiers.
+3. Faire Commit puis Push origin dans GitHub Desktop.
+4. Attendre la fin du déploiement GitHub Pages, puis recharger le site avec Ctrl+F5.
+Le dossier basthon reste en place : aucun téléchargement supplémentaire de ce dossier n’est nécessaire.
+Cette archive est une mise à jour du site existant, pas une installation autonome.
+
+FR / EN
+Le choix en haut du site traduit l’interface, les 28 activités du cours, les 9 exercices des trois TP, les ressources, les projets et le contact.
+La langue choisie est mémorisée. Le paramètre ?lang=fr ou ?lang=en permet aussi de partager un lien dans une langue donnée.
+Le changement garde l’activité en cours et recharge la page. Un notebook prêt est enregistré avant le changement. Le noyau Python redémarre : réexécuter les cellules pour retrouver les variables en mémoire.
+Les notes, fichiers, notebooks et la progression restent communs aux deux langues. Les textes déjà saisis dans les notebooks ne sont pas traduits automatiquement.
+Les 69 cellules de code d’origine sont identiques entre les deux langues, y compris leurs commentaires et noms de variables. Les explications autour du code sont traduites.
+Les menus Basthon utilisent la langue sélectionnée. Les messages internes du moteur et les bibliothèques tierces conservent leurs propres traductions.
+
+PIED DE PAGE
+Style et badge CC repris de thermochimie, avec Partage et citation / Mesure d’audience / Contact.
+Partage et audience s’ouvrent dans des fenêtres intégrées : bouton Fermer, touche Échap et clic à l’extérieur. Le focus revient sur le bouton d’ouverture.
+La fenêtre de partage contient la licence, la référence bibliographique du site et un bouton pour copier le lien de l’activité en cours.
+Contact mène à la page de contact du site Python.
+
+AUDIENCE
+Simple Analytics est intégré, comme dans l’archive thermochimie fournie.
+Le script est chargé seulement sur lenaiclartigue.github.io/python-chimie/ ; il n’est pas chargé dans les aperçus locaux ni ajouté à Basthon.
+Le mode hash compte les consultations des différentes activités (#cours/..., #tp/... etc.). Aucun événement de saisie, contenu du notebook, note, fichier importé ou information de groupe n’est envoyé par l’intégration.
+Après publication, vérifier la réception des visites dans le compte Simple Analytics utilisé pour les autres sites, pour le domaine lenaiclartigue.github.io. Filtrer les chemins commençant par /python-chimie/ pour distinguer ce site de /thermochimie/ et /NanoBioMat/.
+L’accès au compte et la réception effective des statistiques n’ont pas été vérifiés ici.
+Documentation officielle :
+https://docs.simpleanalytics.com/script
+https://docs.simpleanalytics.com/hash-mode
+https://docs.simpleanalytics.com/what-we-do-and-dont-collect
+
+VÉRIFICATION
+Base locale comparée au site public avant modification : index.html, app.js, style.css et content.json identiques.
+Syntaxe JavaScript vérifiée. 28 activités et 9 exercices présents dans les deux langues. Code des 69 cellules identique et blocs de code des TP conservés.
+Navigation FR/EN, maintien de l’activité, fenêtres partage/audience, affichage à deux colonnes et conservation des notes lors du changement de langue vérifiés dans un navigateur de bureau.
+L’exécution complète du noyau Python et la réception des statistiques n’ont pas été validées lors de cet essai. Le moteur Basthon n’est pas modifié.
+
+MAINTENANCE
+app.js / app.en.js : interface et ressources.
+content.json / content.en.json : cours.
+assets/TP*-exercices.json / assets/TP*-exercices.en.json : énoncés.
+site-common.js : éléments communs bilingues, pied de page, fenêtres, audience.
+Toute future modification pédagogique devra être reportée dans les deux langues.
